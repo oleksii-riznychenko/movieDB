@@ -1,0 +1,7 @@
+.header {
+  background-color: blue !important;
+  position: static !important;
+  justify-content: center;
+  height: 61px;
+  box-sizing: content-box !important;
+}
