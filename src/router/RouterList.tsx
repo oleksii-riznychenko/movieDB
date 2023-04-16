@@ -6,6 +6,7 @@ export const RouterList = (): JSX.Element => {
   return (
     <Routes>
       <Route path={configLink.home} element={<Home />} />
+      <Route path="*" element={<>404</>} />
     </Routes>
   );
 };
