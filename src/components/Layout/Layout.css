@@ -8,11 +8,12 @@
   flex: 1 0 auto;
   display: flex;
   overflow-x: hidden;
+  background-color: rgb(7, 18, 35);
 }
 .main-container {
   width: 100%;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding: 30px 0;
 }
 #root {
   height: 100%;
