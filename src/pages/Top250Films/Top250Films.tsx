@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, useEffect } from 'react';
 import {
+  LANG,
   Layout,
   FilmCard,
   PageTitle,
@@ -9,23 +10,39 @@ import {
 import { Grid, Stack } from '@mui/material';
 import { ITop250DataDetail } from '../../models';
 import { useGetTop250MoviesQuery } from '../../service/OthersService';
+import { useTranslation } from 'react-i18next';
+import { FilmsPerPage } from '../../utils/constants';
+import { LanguageSwitch } from '../../components';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const itemsPerPage = 12;
-
-export const Home = (): JSX.Element => {
-  const { data, isLoading } = useGetTop250MoviesQuery('en');
+export const Top250Films = (): JSX.Element => {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { data, isLoading } = useGetTop250MoviesQuery(
+    i18n.language === LANG.UA ? 'uk' : LANG.EN
+  );
   const [page, setPage] = useState<number>(1);
   const [fullFilmData, setFullFilmData] = useState<ITop250DataDetail[]>([]);
   const [itemsForPage, setItemsForPage] = useState<ITop250DataDetail[]>([]);
   const [totalPages, setTotalPages] = useState<number>(1);
 
-  const handleChange = (event: ChangeEvent<unknown>, value: number) => {
-    const startIndex = (value - 1) * itemsPerPage;
-    const endIndex = value * itemsPerPage;
+  const getCurrentPageFromURL = () => {
+    const searchParams = new URLSearchParams(location.search);
+    const pageParam = parseInt(searchParams.get('page') as string);
+
+    return !isNaN(pageParam) ? pageParam : 1;
+  };
+  const handleLoadNewPage = (value: number): void => {
+    const startIndex = (value - 1) * FilmsPerPage;
+    const endIndex = value * FilmsPerPage;
 
     setPage(value);
+    navigate(`?page=${value}`);
     setItemsForPage(fullFilmData.slice(startIndex, endIndex));
   };
+  const handleChange = (event: ChangeEvent<unknown>, value: number) =>
+    handleLoadNewPage(value);
 
   useEffect(() => {
     if (data && Array.isArray(data?.items)) {
@@ -34,16 +51,17 @@ export const Home = (): JSX.Element => {
         image: film?.image?.slice(0, film.image.indexOf('_UX')),
       }));
 
-      setPage(1);
       setFullFilmData(validData);
-      setTotalPages(Math.ceil(data.items.length / itemsPerPage));
-      setItemsForPage(validData.slice(0, itemsPerPage));
+      setPage(getCurrentPageFromURL());
+      setTotalPages(Math.ceil(data.items.length / FilmsPerPage));
     }
   }, [data]);
+  useEffect(() => handleLoadNewPage(getCurrentPageFromURL()), [fullFilmData]);
 
   return (
     <Layout>
-      <PageTitle title="Top 250 Movies" />
+      <LanguageSwitch />
+      <PageTitle title={t('titles.top250Movies')} />
       {isLoading ? (
         <GlobalLoader />
       ) : (
