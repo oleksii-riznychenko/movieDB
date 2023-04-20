@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter } from 'react-router-dom';
 import { RouterList } from './router';
 import { setupStore } from './store';
+import './languages/i18n';
 import './index.css';
 
 const store = setupStore();
