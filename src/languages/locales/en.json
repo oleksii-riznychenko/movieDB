@@ -1,5 +1,18 @@
 {
+  "logo": "LOGO",
   "titles": {
     "top250Movies": "Top 250 Movies"
+  },
+  "header": {
+    "menu": {
+      "movies": "Movies",
+      "series": "Series",
+      "cartoons": "Cartoons",
+      "anime": "Anime",
+      "tvShows": "TV Shows"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved"
   }
 }

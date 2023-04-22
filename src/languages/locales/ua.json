@@ -1,5 +1,18 @@
 {
+  "logo": "ЛОГО",
   "titles": {
     "top250Movies": "Топ 250 фільмів"
+  },
+  "header": {
+    "menu": {
+      "movies": "Фільми",
+      "series": "Серіали",
+      "cartoons": "Мультфільми",
+      "anime": "Аніме",
+      "tvShows": "ТВ-шоу"
+    }
+  },
+  "footer": {
+    "copyright": "Всі права захищені"
   }
 }
