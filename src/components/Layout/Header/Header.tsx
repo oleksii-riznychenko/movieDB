@@ -3,6 +3,7 @@ import { Search, Login, Face, Menu } from '@mui/icons-material';
 import { NavLink, Link } from 'react-router-dom';
 import { HeaderItem } from './Header.types';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitch } from '../../LanguageSwitch';
 import { configLink } from '../../../router';
 
 import './Header.css';
@@ -59,10 +60,15 @@ export const Header = (): JSX.Element => {
     <div className="header">
       {window.innerWidth >= 730 ? (
         <>
-          <Link to={configLink.home} className="header-logo">
-            {t('logo')}
-          </Link>
-          <div className="header-center-item">
+          <div className="header-left-side header-block">
+            <Link to={configLink.home} className="header-logo">
+              {t('logo')}
+            </Link>
+
+            <LanguageSwitch />
+          </div>
+
+          <div className="header-center-item header-block">
             <div className="header-info">
               <ul className="header-links">
                 {config.map(({ id, link, title }) => (
@@ -89,21 +95,28 @@ export const Header = (): JSX.Element => {
           </Link>
         </>
       ) : (
-        <div className="header">
+        <>
           <Menu className="header-menu" onClick={handleMenuClick} />
           {itsOpen ? (
-            <ul className="header-links-mobile">
-              {config.map(({ id, link, title }) => (
-                <li className="header-li-mobile" key={id}>
-                  <NavLink className="header-link-mobile" to={link}>
-                    {title}
-                  </NavLink>
-                </li>
-              ))}
+            <>
+              <div className="header-open">
+                <div className="nn"></div>
+
+                <ul className="header-links-mobile">
+                  {config.map(({ id, link, title }) => (
+                    <li className="header-li-mobile" key={id}>
+                      <NavLink className="header-link-mobile" to={link}>
+                        {title}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <LanguageSwitch />
               <Link to={configLink.home} className="header-profile-mobile">
                 Profile
               </Link>
-            </ul>
+            </>
           ) : null}
 
           <Link to={configLink.home} className="header-logo-mobile">
@@ -113,7 +126,7 @@ export const Header = (): JSX.Element => {
           <Link to={configLink.search} className="header-search-mobile">
             <Search className="header-search-button" />
           </Link>
-        </div>
+        </>
       )}
     </div>
   );
