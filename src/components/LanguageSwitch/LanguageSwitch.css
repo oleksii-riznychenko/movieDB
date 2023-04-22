@@ -1,13 +1,12 @@
 .lang-btn {
-  height: 30px;
-  border: none;
-  min-height: 30px;
+  height: 21px;
   color: var(--main-color) !important;
   border-color: var(--main-color) !important;
   background-color: var(--secondary-bc-color) !important;
+  z-index: 2;
 }
 
 .lang-active {
-  color: var(--is-active) !important;
+  color: var(--secondary-bc-color) !important;
   background-color: var(--main-color) !important;
 }

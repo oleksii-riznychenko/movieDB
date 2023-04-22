@@ -12,7 +12,6 @@ import { ITop250DataDetail } from '../../models';
 import { useGetTop250MoviesQuery } from '../../service/OthersService';
 import { useTranslation } from 'react-i18next';
 import { FilmsPerPage } from '../../utils/constants';
-import { LanguageSwitch } from '../../components';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export const Top250Films = (): JSX.Element => {
@@ -60,7 +59,6 @@ export const Top250Films = (): JSX.Element => {
 
   return (
     <Layout>
-      <LanguageSwitch />
       <PageTitle title={t('titles.top250Movies')} />
       {isLoading ? (
         <GlobalLoader />
