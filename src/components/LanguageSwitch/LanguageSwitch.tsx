@@ -32,7 +32,7 @@ export const LanguageSwitch = (): JSX.Element => {
 
   return (
     <Box>
-      <ButtonGroup size="small" variant="contained">
+      <ButtonGroup size="small" variant="contained" className="button">
         {config.map(({ lang, className, handleClick }) => (
           <Button
             key={lang}
