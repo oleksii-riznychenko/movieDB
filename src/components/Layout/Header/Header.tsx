@@ -5,6 +5,7 @@ import { HeaderItem } from './Header.types';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitch } from '../../LanguageSwitch';
 import { configLink } from '../../../router';
+import classNames from 'classnames';
 
 import './Header.css';
 
@@ -60,20 +61,21 @@ export const Header = (): JSX.Element => {
     <div className="header">
       {window.innerWidth >= 730 ? (
         <>
-          <div className="header-left-side header-block">
-            <Link to={configLink.home} className="header-logo">
-              {t('logo')}
-            </Link>
+          <Link to={configLink.home} className="header-logo">
+            {t('logo')}
+          </Link>
 
-            <LanguageSwitch />
-          </div>
-
-          <div className="header-center-item header-block">
+          <div className="header-center-item">
             <div className="header-info">
               <ul className="header-links">
                 {config.map(({ id, link, title }) => (
                   <li className="header-li" key={id}>
-                    <NavLink className="header-link" to={link}>
+                    <NavLink
+                      className={({ isActive }) =>
+                        classNames('header-link', { 'is-active': isActive })
+                      }
+                      to={link}
+                    >
                       {title}
                     </NavLink>
                   </li>
@@ -86,13 +88,16 @@ export const Header = (): JSX.Element => {
             </Link>
           </div>
 
-          <Link
-            to={configLink.home}
-            onClick={toggleLogIn}
-            className="header-profile"
-          >
-            {!logIn ? <Login /> : <Face />}
-          </Link>
+          <div className="header-right-side">
+            <LanguageSwitch />
+            <Link
+              to={configLink.home}
+              onClick={toggleLogIn}
+              className="header-profile"
+            >
+              {!logIn ? <Login /> : <Face />}
+            </Link>
+          </div>
         </>
       ) : (
         <>
@@ -100,8 +105,6 @@ export const Header = (): JSX.Element => {
           {itsOpen ? (
             <>
               <div className="header-open">
-                <div className="nn"></div>
-
                 <ul className="header-links-mobile">
                   {config.map(({ id, link, title }) => (
                     <li className="header-li-mobile" key={id}>
@@ -110,12 +113,11 @@ export const Header = (): JSX.Element => {
                       </NavLink>
                     </li>
                   ))}
+                  <Link to={configLink.home} className="header-profile-mobile">
+                    {t('header.profile')}
+                  </Link>
                 </ul>
               </div>
-              <LanguageSwitch />
-              <Link to={configLink.home} className="header-profile-mobile">
-                Profile
-              </Link>
             </>
           ) : null}
 
@@ -123,9 +125,13 @@ export const Header = (): JSX.Element => {
             {t('logo')}
           </Link>
 
-          <Link to={configLink.search} className="header-search-mobile">
-            <Search className="header-search-button" />
-          </Link>
+          <div className="header-right-side">
+            <LanguageSwitch />
+
+            <Link to={configLink.search} className="header-search-mobile">
+              <Search className="header-search-button" />
+            </Link>
+          </div>
         </>
       )}
     </div>

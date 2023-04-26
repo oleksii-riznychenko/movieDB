@@ -30,6 +30,7 @@
 
 .footer-rights {
   text-align: right;
+  color: var(--main-color);
 }
 
 @media (max-width: 550px) {

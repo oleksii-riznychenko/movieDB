@@ -10,7 +10,13 @@
       "cartoons": "Cartoons",
       "anime": "Anime",
       "tvShows": "TV Shows"
-    }
+    },
+    "profile": "Profile"
+  },
+  "not-found": {
+    "sorry": "Sorry something went wrong",
+    "try-again": "Sorry, the page you are looking for cannot be found. Check the URL and try again.",
+    "go-home": "Home"
   },
   "footer": {
     "copyright": "All rights reserved"

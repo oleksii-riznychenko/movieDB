@@ -7,12 +7,15 @@
   display: none;
 }
 .film-card__content {
-  padding-left: 0 !important;
+  padding: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 .film-card__image {
   height: 342px;
   max-width: 100%;
-  max-height: 342px;
+  max-height: 500px;
+  border-radius: 15px !important;
 }
 .film-card__rate {
   top: 5px;
