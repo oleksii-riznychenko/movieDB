@@ -1,8 +1,30 @@
 :root {
-  --main-bc-color: #000000;
-  --secondary-bc-color: #303030;
-  --is-active: #fffefe;
-  --main-color: #f7f7f7;
+   /* BASIC COLOR THEME */
+  /*--main-color: #f7f7f7;*/
+  /*--main-bc-color: #000000;*/
+  /*--secondary-bc-color: #303030;*/
+  /*--third-bc-color: #464646;*/
+  /*--fs-14: 14px;*/
+  /*--fs-16: 16px;*/
+  /*--border-radius-30: 30px;*/
+
+
+  /* VARIANT 2 */
+  /*--main-color: #F55449;*/
+  /*--main-bc-color: #0F1F38;*/
+  /*--secondary-bc-color: #1B4B5A;*/
+  /*--third-bc-color: #5B7065;*/
+  /*--fs-14: 14px;*/
+  /*--fs-16: 16px;*/
+  /*--border-radius-30: 30px;*/
+
+
+  /* VARIANT 3 */
+  --main-color: #FFFFFF;
+  --main-bc-color: #283655;
+  --secondary-bc-color: #4D648D;
+  --third-bc-color: #2e4a7a;
   --fs-14: 14px;
   --fs-16: 16px;
+  --border-radius-30: 30px;
 }

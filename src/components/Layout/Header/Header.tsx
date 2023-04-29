@@ -3,7 +3,9 @@ import { Search, Login, Face, Menu } from '@mui/icons-material';
 import { NavLink, Link } from 'react-router-dom';
 import { HeaderItem } from './Header.types';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitch } from '../../LanguageSwitch';
 import { configLink } from '../../../router';
+import classNames from 'classnames';
 
 import './Header.css';
 
@@ -62,12 +64,18 @@ export const Header = (): JSX.Element => {
           <Link to={configLink.home} className="header-logo">
             {t('logo')}
           </Link>
+
           <div className="header-center-item">
             <div className="header-info">
               <ul className="header-links">
                 {config.map(({ id, link, title }) => (
                   <li className="header-li" key={id}>
-                    <NavLink className="header-link" to={link}>
+                    <NavLink
+                      className={({ isActive }) =>
+                        classNames('header-link', { 'is-active': isActive })
+                      }
+                      to={link}
+                    >
                       {title}
                     </NavLink>
                   </li>
@@ -80,40 +88,51 @@ export const Header = (): JSX.Element => {
             </Link>
           </div>
 
-          <Link
-            to={configLink.home}
-            onClick={toggleLogIn}
-            className="header-profile"
-          >
-            {!logIn ? <Login /> : <Face />}
-          </Link>
+          <div className="header-right-side">
+            <LanguageSwitch />
+            <Link
+              to={configLink.home}
+              onClick={toggleLogIn}
+              className="header-profile"
+            >
+              {!logIn ? <Login /> : <Face />}
+            </Link>
+          </div>
         </>
       ) : (
-        <div className="header">
+        <>
           <Menu className="header-menu" onClick={handleMenuClick} />
           {itsOpen ? (
-            <ul className="header-links-mobile">
-              {config.map(({ id, link, title }) => (
-                <li className="header-li-mobile" key={id}>
-                  <NavLink className="header-link-mobile" to={link}>
-                    {title}
-                  </NavLink>
-                </li>
-              ))}
-              <Link to={configLink.home} className="header-profile-mobile">
-                Profile
-              </Link>
-            </ul>
+            <>
+              <div className="header-open">
+                <ul className="header-links-mobile">
+                  {config.map(({ id, link, title }) => (
+                    <li className="header-li-mobile" key={id}>
+                      <NavLink className="header-link-mobile" to={link}>
+                        {title}
+                      </NavLink>
+                    </li>
+                  ))}
+                  <Link to={configLink.home} className="header-profile-mobile">
+                    {t('header.profile')}
+                  </Link>
+                </ul>
+              </div>
+            </>
           ) : null}
 
           <Link to={configLink.home} className="header-logo-mobile">
             {t('logo')}
           </Link>
 
-          <Link to={configLink.search} className="header-search-mobile">
-            <Search className="header-search-button" />
-          </Link>
-        </div>
+          <div className="header-right-side">
+            <LanguageSwitch />
+
+            <Link to={configLink.search} className="header-search-mobile">
+              <Search className="header-search-button" />
+            </Link>
+          </div>
+        </>
       )}
     </div>
   );

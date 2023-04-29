@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 0 30px 0 30px;
+  padding: 0 3%;
 }
 
 .footer-block {
@@ -30,9 +30,10 @@
 
 .footer-rights {
   text-align: right;
+  color: var(--main-color);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .footer {
     height: 300px;
     flex-direction: column;
