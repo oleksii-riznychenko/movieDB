@@ -7,4 +7,5 @@ export const configLink = {
   anime: '/anime',
   tvShows: '/tv-shows',
   top250Films: '/top250Films',
+  film: '/film/',
 };

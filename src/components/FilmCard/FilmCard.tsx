@@ -9,6 +9,7 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { StarBorder, DateRange } from '@mui/icons-material';
 import { ITop250DataDetail } from '../../models';
+import { configLink } from '../../router';
 import './FilmCard.css';
 
 export const FilmCard = ({
@@ -21,8 +22,8 @@ export const FilmCard = ({
   return (
     <Card className="film-card">
       <CardActionArea
-        to={`/${id}`}
         component={RouterLink}
+        to={configLink.film + id}
         className="film-card__action-area"
       >
         <Chip
