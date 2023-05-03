@@ -1,5 +1,5 @@
 :root {
-   /* BASIC COLOR THEME */
+  /* BASIC COLOR THEME */
   /*--main-color: #f7f7f7;*/
   /*--main-bc-color: #000000;*/
   /*--secondary-bc-color: #303030;*/
@@ -7,7 +7,6 @@
   /*--fs-14: 14px;*/
   /*--fs-16: 16px;*/
   /*--border-radius-30: 30px;*/
-
 
   /* VARIANT 2 */
   /*--main-color: #F55449;*/
@@ -18,11 +17,10 @@
   /*--fs-16: 16px;*/
   /*--border-radius-30: 30px;*/
 
-
   /* VARIANT 3 */
-  --main-color: #FFFFFF;
+  --main-color: #ffffff;
   --main-bc-color: #283655;
-  --secondary-bc-color: #4D648D;
+  --secondary-bc-color: #4d648d;
   --third-bc-color: #2e4a7a;
   --fs-14: 14px;
   --fs-16: 16px;

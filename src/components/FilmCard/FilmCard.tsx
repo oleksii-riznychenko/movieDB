@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { StarBorder, DateRange } from '@mui/icons-material';
-import { ITop250DataDetail } from '../../models';
+import { IMoviesDataDetail } from '../../models';
 import './FilmCard.css';
 
 export const FilmCard = ({
@@ -17,7 +17,7 @@ export const FilmCard = ({
   title,
   image,
   imDbRating,
-}: ITop250DataDetail): JSX.Element => {
+}: IMoviesDataDetail): JSX.Element => {
   return (
     <Card className="film-card">
       <CardActionArea

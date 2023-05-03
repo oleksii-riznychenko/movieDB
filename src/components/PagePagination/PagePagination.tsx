@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Pagination } from '@mui/material';
+import { Pagination } from '@mui/material';
 import { IPagePagination } from './PagePagination.types';
 import './PagePagination.css';
 
@@ -10,7 +10,6 @@ export const PagePagination = ({
 }: IPagePagination) => {
   return (
     <>
-      <Divider light />
       <Pagination
         page={page}
         count={totalPages}

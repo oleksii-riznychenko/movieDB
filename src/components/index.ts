@@ -4,3 +4,5 @@ export { PageTitle } from './PageTitle';
 export { GlobalLoader } from './GlobalLoader';
 export { PagePagination } from './PagePagination';
 export { LanguageSwitch, LANG } from './LanguageSwitch';
+export { HomePageFilmCard } from './HomePageFilmCard';
+export { FilmBanner } from './FilmBanner';
