@@ -1,7 +1,7 @@
 export const configLink = {
   home: '/',
   search: '/search',
-  movies: '/top250films',
+  movies: '/movies',
   series: '/series',
   cartoons: '/cartoons',
   anime: '/anime',

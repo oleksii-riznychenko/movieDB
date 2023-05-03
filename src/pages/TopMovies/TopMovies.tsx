@@ -1,14 +1,14 @@
-import { useGetTop250MoviesQuery } from '../../service/OthersService';
+import { useGetPopularMoviesQuery } from '../../service/OthersService';
+import { FilmCatalog } from '../../components/FilmCatalog';
 
 import { useTranslation } from 'react-i18next';
-import { FilmCatalog } from '../../components/FilmCatalog';
 import { LANG } from '../../components';
 import i18n from 'i18next';
 
-export const Top250Films = () => {
+export const TopMovies = () => {
   const { t } = useTranslation();
 
-  const { data, isLoading } = useGetTop250MoviesQuery(
+  const { data, isLoading } = useGetPopularMoviesQuery(
     i18n.language === LANG.UA ? 'uk' : LANG.EN
   );
 
@@ -16,7 +16,7 @@ export const Top250Films = () => {
     <FilmCatalog
       data={data}
       isLoading={isLoading}
-      title={t('titles.top250Movies')}
+      title={t('titles.popularMovies')}
     />
   );
 };
