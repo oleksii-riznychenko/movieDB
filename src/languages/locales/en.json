@@ -22,6 +22,25 @@
     "copyright": "All rights reserved"
   },
   "filmDetails": {
-    "originalTitle": "Original title"
+    "originalTitle": "Original title",
+    "watchTrailer": "Watch trailer",
+    "details": "Details",
+    "genres": "Genres",
+    "countryOfOrigin": "Country of origin",
+    "releaseDate": "Release date",
+    "contentRating": "Rating",
+    "budget": "Budget",
+    "cumulativeWorldwideGross": "Cumulative worldwide gross",
+    "companyList": "Company",
+    "director": "Director",
+    "runtime": "Runtime",
+    "castAndCrew": "Cast & Crew",
+    "showAll": "Show all",
+    "as": "as",
+    "linkSuccessfullyCopied": "Link successfully copied",
+    "similarMovies": "Similar movies"
+  },
+  "modal": {
+    "close": "Close"
   }
 }

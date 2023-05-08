@@ -8,9 +8,9 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { StarBorder, DateRange } from '@mui/icons-material';
-import { ITop250DataDetail } from '../../models';
 import { configLink } from '../../router';
-import './FilmCard.css';
+import { IFilmCard } from './FilmCard.types';
+import './FilmCard.scss';
 
 export const FilmCard = ({
   id,
@@ -18,9 +18,10 @@ export const FilmCard = ({
   title,
   image,
   imDbRating,
-}: ITop250DataDetail): JSX.Element => {
+  className = '',
+}: IFilmCard): JSX.Element => {
   return (
-    <Card className="film-card">
+    <Card className={`film-card ${className}`}>
       <CardActionArea
         component={RouterLink}
         to={configLink.film + id}
@@ -33,13 +34,15 @@ export const FilmCard = ({
           icon={<StarBorder />}
           className="film-card__rate"
         />
-        <Chip
-          size="small"
-          label={year}
-          color="primary"
-          icon={<DateRange />}
-          className="film-card__year"
-        />
+        {year && (
+          <Chip
+            size="small"
+            label={year}
+            color="primary"
+            icon={<DateRange />}
+            className="film-card__year"
+          />
+        )}
         <CardMedia
           alt="poster"
           image={image}

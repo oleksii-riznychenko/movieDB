@@ -1,0 +1,1 @@
+export { ModalMovie } from './ModalMovie';

@@ -1,0 +1,1 @@
+export { ButtonMovie } from './ButtonMovie';

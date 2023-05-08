@@ -1,25 +1,49 @@
-import { Layout } from '../../components';
-import { ITitleData } from '../../models';
-import { Box, Typography } from '@mui/material';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { GlobalLoader, Layout } from '../../components';
+import { Stack, Container } from '@mui/material';
+import {
+  DetailsCast,
+  DetailsContent,
+  DetailsPosterAndRating,
+} from './components';
+import { useGetMoviesOrSeriesTVInformationQuery } from '../../service/TitleService';
+import { useParams } from 'react-router-dom';
+import { DetailsSimilars } from './components/DetailsSimilars';
+import './FilmDetails.scss';
 
 export const FilmDetails = (): JSX.Element => {
-  // useGetMoviesOrSeriesTVInformationQuery
-  const { t, i18n } = useTranslation();
-  //const data: ITitleData = localStorage.getItem('lol');
+  const params = useParams();
+  const { data, isLoading } = useGetMoviesOrSeriesTVInformationQuery(
+    String(params.id)
+  );
 
   return (
     <Layout>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Box sx={{ width: '33%' }}></Box>
-        <Box sx={{ width: '33%' }}>
-          <Typography>title</Typography>
-          <Typography>
-            {t('filmDetails.originalTitle')}: originalTitle
-          </Typography>
-        </Box>
-        <Box sx={{ width: '33%' }}></Box>
-      </Box>
+      <Container maxWidth="xl" className="film-details">
+        {isLoading ? (
+          <GlobalLoader />
+        ) : data ? (
+          <Stack spacing={2}>
+            <Stack
+              spacing={4}
+              className="film-details__stack"
+              direction={{ xs: 'column', sm: 'row' }}
+            >
+              <DetailsPosterAndRating
+                image={data.image}
+                ratings={data.ratings}
+                imDbRating={data.imDbRating}
+                metacriticRating={data.metacriticRating}
+              />
+              <DetailsContent data={data} />
+              <DetailsCast filmId={data.id} actorList={data.actorList} />
+            </Stack>
+            {Array.isArray(data.similars) && (
+              <DetailsSimilars similars={data.similars} />
+            )}
+          </Stack>
+        ) : null}
+      </Container>
     </Layout>
   );
 };

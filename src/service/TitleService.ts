@@ -7,12 +7,9 @@ export const titleAPI = createApi({
   baseQuery: fetchBaseQuery({ baseUrl }),
   tagTypes: ['title'],
   endpoints: (build) => ({
-    getMoviesOrSeriesTVInformation: build.query<
-      ITitleData,
-      { lang: string; id: number }
-    >({
-      query: ({ lang = 'en', id }) => ({
-        url: `/${lang}/API/Title/${APIKEY}/${id}`,
+    getMoviesOrSeriesTVInformation: build.query<ITitleData, string>({
+      query: (id) => ({
+        url: `/uk/API/Title/${APIKEY}/${id}/FullActor,Posters,Images,Trailer,Ratings,Wikipedia`,
       }),
       providesTags: () => ['title'],
     }),
