@@ -1,3 +1,4 @@
+export const savedFilms = 'savedFilms';
 export const FilmsPerPage = 18;
 export const FilmsOnCarousel = 7;
 export const INSTAGRAM = 'https://www.instagram.com/';

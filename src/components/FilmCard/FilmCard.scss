@@ -1,0 +1,38 @@
+.film-card {
+  min-height: 100%;
+  box-shadow: none !important;
+  background: transparent !important;
+  &--small {
+    .film-card__image {
+      height: 250px;
+    }
+    h6 {
+      font-size: 14px !important;
+      text-align: center;
+    }
+  }
+  &__action-area > span {
+    display: none;
+  }
+  &__content {
+    padding: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  &__image {
+    height: 342px;
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 15px !important;
+  }
+  &__rate {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+  }
+  &__year {
+    top: 5px;
+    right: 5px;
+    position: absolute;
+  }
+}

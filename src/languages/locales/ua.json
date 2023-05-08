@@ -22,5 +22,27 @@
   },
   "footer": {
     "copyright": "Всі права захищені"
+  },
+  "filmDetails": {
+    "originalTitle": "Оригінальна назва",
+    "watchTrailer": "Переглянути трейлер",
+    "details": "Подробиці",
+    "genres": "Жанри",
+    "countryOfOrigin": "Країна",
+    "releaseDate": "Дата виходу",
+    "contentRating": "Рейтинг",
+    "budget": "Бюджет",
+    "cumulativeWorldwideGross": "Загальньний збір у світі",
+    "companyList": "Компанія",
+    "director": "Режисер",
+    "runtime": "Час",
+    "castAndCrew": "Актори & Знімальна група",
+    "showAll": "Переглянути всіх",
+    "as": "у ролі",
+    "linkSuccessfullyCopied": "Посилання успішно скопійовано",
+    "similarMovies": "Cхожі фільми"
+  },
+  "modal": {
+    "close": "Закрити"
   }
 }

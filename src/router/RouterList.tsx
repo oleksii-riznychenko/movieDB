@@ -6,7 +6,8 @@ import {
   TopMovies,
   TopSeries,
   Top250Films,
-} from '../pages/';
+  FilmDetails,
+} from '../pages';
 
 export const RouterList = (): JSX.Element => {
   return (
@@ -15,6 +16,7 @@ export const RouterList = (): JSX.Element => {
       <Route path={configLink.movies} element={<TopMovies />} />
       <Route path={configLink.series} element={<TopSeries />} />
       <Route path={configLink.top250Films} element={<Top250Films />} />
+      <Route path={`${configLink.film}:id`} element={<FilmDetails />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -12,6 +12,11 @@ import './index.css';
 const store = setupStore();
 
 const darkTheme = createTheme({
+  typography: {
+    fontFamily: ['-apple-system', 'Roboto', '"Open Sans"', '"Noto Sans"'].join(
+      ','
+    ),
+  },
   palette: {
     mode: 'dark',
   },
