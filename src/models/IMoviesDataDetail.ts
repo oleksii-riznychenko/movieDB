@@ -1,4 +1,4 @@
-export interface ITop250DataDetail {
+export interface IMoviesDataDetail {
   id: string;
   rank: string;
   title: string;

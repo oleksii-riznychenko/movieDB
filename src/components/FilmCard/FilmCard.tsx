@@ -1,10 +1,10 @@
 import {
   Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
   Chip,
+  CardMedia,
   Typography,
+  CardContent,
+  CardActionArea,
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { StarBorder, DateRange } from '@mui/icons-material';
@@ -30,7 +30,7 @@ export const FilmCard = ({
         <Chip
           size="small"
           color="success"
-          label={imDbRating}
+          label={imDbRating.length > 0 ? imDbRating : 'Unrated'}
           icon={<StarBorder />}
           className="film-card__rate"
         />

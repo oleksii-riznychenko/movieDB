@@ -1,0 +1,15 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-movies-title {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-carousel {
+  display: flex;
+  justify-content: center;
+}

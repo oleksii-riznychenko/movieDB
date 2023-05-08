@@ -1,7 +1,9 @@
 {
   "logo": "ЛОГО",
   "titles": {
-    "top250Movies": "Топ 250 фільмів"
+    "top250Movies": "Топ 250 фільмів",
+    "popularMovies": "Популярні Фільми",
+    "popularSeries": "Популярні Серіали"
   },
   "header": {
     "menu": {

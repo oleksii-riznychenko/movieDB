@@ -1,5 +1,3 @@
-export type { ITop250Data } from './ITop250Data';
-export type { ITop250DataDetail } from './ITop250DataDetail';
 export type { ITitleData } from './ITitleData';
 export type { IStarShort } from './IStarShort';
 export type { IActorShort } from './IActorShort';
@@ -19,3 +17,6 @@ export type { ITrailerData } from './ITrailerData';
 export type { IBoxOfficeShort } from './IBoxOfficeShort';
 export type { ITvSeriesInfo } from './ITvSeriesInfo';
 export type { ISimilarShort } from './ISimilarShort';
+export type { IMoviesData } from './IMoviesData';
+export type { IMoviesDataDetail } from './IMoviesDataDetail';
+export type { IServerData } from './IServerData';
