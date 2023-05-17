@@ -42,6 +42,14 @@
     "linkSuccessfullyCopied": "Link successfully copied",
     "similarMovies": "Similar movies"
   },
+  "actorDetails": {
+    "birthDate": "Date of birth",
+    "deathDate": "Date of death",
+    "credits": "Credits",
+    "height": "Height",
+    "awards": "Awards",
+    "biography": "Biography"
+  },
   "modal": {
     "close": "Close"
   }

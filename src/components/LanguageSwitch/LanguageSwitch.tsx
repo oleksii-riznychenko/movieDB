@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Box, Button, ButtonGroup } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { ILangConfig, LANG } from './LanguageSwitch.types';
-import './LanguageSwitch.css';
+import './LanguageSwitch.scss';
 
 export const LanguageSwitch = (): JSX.Element => {
   const { i18n } = useTranslation();

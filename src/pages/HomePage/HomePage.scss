@@ -1,0 +1,15 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__carousel {
+    display: flex;
+    justify-content: center;
+  }
+}

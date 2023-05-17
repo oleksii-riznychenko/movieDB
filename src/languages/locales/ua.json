@@ -42,6 +42,14 @@
     "linkSuccessfullyCopied": "Посилання успішно скопійовано",
     "similarMovies": "Cхожі фільми"
   },
+  "actorDetails": {
+    "birthDate": "Дата народження",
+    "deathDate": "Дата смерті",
+    "credits": "Рід діяльності",
+    "height": "Зріст",
+    "awards": "Нагороди",
+    "biography": "Біографія"
+  },
   "modal": {
     "close": "Закрити"
   }

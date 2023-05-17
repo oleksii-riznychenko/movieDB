@@ -1,0 +1,77 @@
+@import 'src/assets/styles/variables/variables';
+
+.not-found {
+  width: 70%;
+  margin: 0 auto;
+  height: 75vh;
+  background-color: $main-bc-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: $border-radius-30;
+  color: $main-font-color;
+  padding: 70px;
+
+  &__number {
+    font-size: 80px;
+  }
+
+  &__sorry {
+    font-size: 50px;
+  }
+
+  &__try-again {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+
+  &__go-home {
+    width: 150px;
+    color: $main-font-color;
+    background-color: $secondary-bc-color;
+    margin: 30px auto;
+    border: 1px solid $main-font-color;
+    border-radius: $border-radius-30;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .not-found {
+    width: 85%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .not-found {
+    &__number {
+      font-size: 60px;
+    }
+
+    &__sorry {
+      font-size: 35px;
+    }
+
+    &__try-again {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .not-found {
+    &__number {
+      font-size: 40px;
+    }
+
+    &__sorry {
+      font-size: 25px;
+    }
+
+    &__try-again {
+      font-size: 20px;
+    }
+  }
+}
