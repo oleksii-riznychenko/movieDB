@@ -1,7 +1,8 @@
 import { IMoviesDataDetail } from '../../models';
 import { Link } from 'react-router-dom';
-
-import './HomePageFilmCard.css';
+import { configLink } from '../../router';
+import '../../assets/styles/variables/variables.scss';
+import './HomePageFilmCard.scss';
 
 export const HomePageFilmCard = ({
   id,
@@ -12,7 +13,7 @@ export const HomePageFilmCard = ({
 }: IMoviesDataDetail): JSX.Element => {
   return (
     <div className="home-film-card">
-      <Link to={`/${id}`}>
+      <Link to={configLink.film + id}>
         <div
           className="home-film-card-image"
           style={{ backgroundImage: `url(${image})` }}

@@ -1,0 +1,55 @@
+@import 'src/assets/styles/variables/variables';
+
+.footer {
+  height: 70px;
+  text-align: center;
+  background: $main-bc-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 3%;
+
+  &__block {
+    width: 33%;
+  }
+
+  &__logo {
+    text-align: left;
+    color: $main-font-color;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    margin: 10px;
+    color: $main-font-color;
+  }
+
+  &__rights {
+    text-align: right;
+    color: $main-font-color;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    height: 300px;
+    flex-direction: column;
+    padding: 50px;
+
+    &__logo,
+    &__rights,
+    &__links {
+      width: 100%;
+    }
+
+    &__logo,
+    &__rights {
+      text-align: center;
+    }
+  }
+}

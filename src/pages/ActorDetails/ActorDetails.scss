@@ -1,0 +1,32 @@
+@import 'src/assets/styles/variables/variables';
+
+.actor-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 30px;
+    border-bottom: 1px solid $main-font-color;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+  }
+
+  &__image {
+    height: 40vh;
+    max-width: 20%;
+    object-fit: cover;
+    border: 5px solid $main-bc-color;
+    border-radius: $border-radius-10;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
+}
