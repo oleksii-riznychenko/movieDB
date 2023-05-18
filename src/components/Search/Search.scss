@@ -1,0 +1,44 @@
+@import 'src/assets/styles/variables/variables';
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    padding-left: 10px;
+    font-size: 20px;
+    height: 40px;
+    width: 300px;
+    margin: 0 auto 30px;
+    border: 3px solid $main-bc-color;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+
+  }
+
+  &__button {
+    height: 40px;
+    width: 150px;
+    font-size: $fs-16;
+    border: 1px solid $main-font-color;
+    border-radius: $border-radius-30;
+    color: $main-font-color;
+    background-color: $main-bc-color;
+  }
+
+  &__results {
+    margin-top: 30px;
+  }
+}

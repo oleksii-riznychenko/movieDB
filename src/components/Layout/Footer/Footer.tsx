@@ -11,7 +11,7 @@ import { Instagram, Facebook, Twitter, Telegram } from '@mui/icons-material';
 import { configLink } from '../../../router';
 import { FooterConfig } from './Footer.types';
 
-import './Footer.css';
+import './Footer.scss';
 
 export const Footer = (): JSX.Element => {
   const { t } = useTranslation();
@@ -42,19 +42,19 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer className="footer">
-      <Link to={configLink.home} className="footer-block footer-logo">
+      <Link to={configLink.home} className="footer__block footer__logo">
         {t('logo')}
       </Link>
 
-      <div className="footer-block footer-links">
+      <div className="footer__block footer__links">
         {config.links.map(({ link, Icon }) => (
           <Link key={link} to={link}>
-            <Icon className="footer-link" />
+            <Icon className="footer__link" />
           </Link>
         ))}
       </div>
 
-      <div className="footer-block footer-rights">
+      <div className="footer__block footer__rights">
         <div>&copy;&nbsp;{config.currentYear}</div>
         <div>{t('footer.copyright')}</div>
       </div>

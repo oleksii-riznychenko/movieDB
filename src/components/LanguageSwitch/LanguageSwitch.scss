@@ -1,0 +1,25 @@
+@import 'src/assets/styles/variables/variables';
+
+.button {
+  background-color: $main-bc-color;
+  padding: 2px !important;
+  border-radius: $border-radius-30 !important;
+  box-shadow: none !important;
+  border: 1px solid $main-font-color;
+}
+
+.lang-btn {
+  height: 16px;
+  color: $main-font-color !important;
+  border: none !important;
+  background-color: $main-bc-color !important;
+  padding: 0 !important;
+  border-radius: $border-radius-30 !important;
+}
+
+.lang-active {
+  color: $secondary-bc-color !important;
+  background-color: $main-font-color !important;
+  border-radius: $border-radius-30 !important;
+  padding: 0 !important;
+}

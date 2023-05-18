@@ -87,6 +87,7 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
               onClick={handleOpenTrailer}
               EndIcon={<PlayArrowOutlined />}
               content={t('filmDetails.watchTrailer')}
+              className="film-details__background"
             />
             <ModalMovie
               open={openTrailer}
@@ -97,7 +98,7 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
                   allowFullScreen
                   className="film-details__trailer"
                   title={data.trailer?.fullTitle || ''}
-                  src="https://www.imdb.com/video/imdb/vi2959588889/imdb/embed"
+                  src={data.trailer?.linkEmbed || ''}
                 />
               }
             />
@@ -108,11 +109,13 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
           onClick={handleSaveFilm}
           colorIcon={filmSaved ? 'warning' : 'primary'}
           Icon={filmSaved ? Bookmark : BookmarkBorderOutlined}
+          className="film-details__background"
         />
         <IconButtonMovie
           Icon={Link}
           aria-label="copy link"
           onClick={handleCopyLink}
+          className="film-details__background"
         />
         <AlertMovie
           open={openAlert}

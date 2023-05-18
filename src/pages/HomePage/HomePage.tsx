@@ -14,7 +14,7 @@ import { useGetPopularMoviesQuery } from '../../service/OthersService';
 import { IMoviesDataDetail } from '../../models';
 import { FilmsOnCarousel } from '../../utils/constants';
 
-import './HomePage.css';
+import './HomePage.scss';
 
 export const HomePage = (): JSX.Element => {
   const { t, i18n } = useTranslation();
@@ -64,15 +64,11 @@ export const HomePage = (): JSX.Element => {
         <GlobalLoader />
       ) : (
         <div className="home-page">
-          {/*<div>*/}
-          {/*  <FilmBanner {...fullFilmData[0]} />*/}
-          {/*</div>*/}
-
           <div>
-            <span className="top-movies-title">
+            <span className="home-page__title">
               {t('titles.popularMovies')}
             </span>
-            <div className="home-page-carousel">
+            <div className="home-page__carousel">
               {Array.isArray(itemsForPage) &&
                 itemsForPage.map((movie) => (
                   <div key={movie.id}>

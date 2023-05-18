@@ -3,7 +3,7 @@ import { ILayout } from './Layout.types';
 import { Box, Container } from '@mui/material';
 import { Footer } from './Footer';
 import { Header } from './Header';
-import './Layout.css';
+import './Layout.scss';
 
 export const Layout = ({ children }: ILayout): JSX.Element => {
   return (

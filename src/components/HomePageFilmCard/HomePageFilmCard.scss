@@ -1,3 +1,5 @@
+@import 'src/assets/styles/variables/variables';
+
 .home-film-card {
   display: flex;
   margin: 10px 5px 30px;
@@ -39,5 +41,5 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  color: var(--main-color);
+  color: $main-font-color;
 }

@@ -2,4 +2,4 @@
 @import '~@csstools/normalize.css';
 @import 'assets/styles/fonts/fonts.css';
 @import 'assets/styles/common/common.css';
-@import './assets/styles/variables/variables.css';
+@import 'assets/styles/variables/variables.scss';

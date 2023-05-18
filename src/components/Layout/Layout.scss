@@ -1,3 +1,5 @@
+@import 'src/assets/styles/variables/variables';
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
   flex: 1 0 auto;
   display: flex;
   overflow-x: hidden;
-  background-color: var(--secondary-bc-color);
+  background-color: $secondary-bc-color;
 }
 .main-container {
   width: 100%;
