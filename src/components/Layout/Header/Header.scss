@@ -1,11 +1,9 @@
 @import 'src/assets/styles/variables/variables';
 
-/* DESKTOP */
-
 .is-active {
   background-color: $third-bc-color;
-  border-radius: $border-radius-30;
-  transition: background-color 1s ease;
+  border-radius: $main-border-radius;
+  box-shadow: $secondary-box-shadow;
 }
 
 .header {
@@ -16,56 +14,12 @@
   justify-content: space-between;
   background-color: $main-bc-color;
   padding: 0 3%;
+  z-index: 1;
+  box-shadow: $secondary-box-shadow;
 
   &__logo {
-    color: $main-font-color;
-  }
-
-  &__center-item {
-    display: flex;
-    align-items: center;
-    margin-left: 10%;
-  }
-
-  &__search {
-    margin-left: -17px;
-    padding: 6px 10px 5px 21px;
-    background: $third-bc-color;
-    border-radius: 0 $border-radius-30 $border-radius-30 0;
-    z-index: 0;
-  }
-
-  &__search-button {
-    color: $main-font-color;
-  }
-
-  &__search-button:active {
-    color: $secondary-font-color;
-  }
-
-  &__info {
-    background-color: $secondary-bc-color;
-    border-radius: $border-radius-30;
-    line-height: 0;
-    z-index: 1;
-  }
-
-  &__links {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    color: $main-font-color;
-  }
-
-  &__li {
-    list-style-type: none;
-    padding: 18px 1px;
-  }
-
-  &__link {
-    color: $main-font-color;
-    margin: 3px;
-    padding: 5px 10px;
+    height: 35px;
+    width: 140px;
   }
 
   &__right-side {
@@ -75,79 +29,5 @@
   &__profile {
     color: $main-font-color;
     margin-left: 15px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 850px) {
-  .header {
-    &__center-item {
-      margin-left: 0;
-    }
-  }
-}
-
-@media (max-width: 730px) {
-  .header {
-    &__open {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 1;
-      background-color: $secondary-bc-color;
-      overflow: hidden;
-    }
-
-    &__menu {
-      cursor: pointer;
-      z-index: 2;
-    }
-
-    &__links-mobile {
-      margin: 25% auto;
-      padding: 0;
-    }
-
-    &__li-mobile {
-      list-style-type: none;
-      text-align: center;
-      margin: 20% 0;
-    }
-
-    &__link-mobile,
-    &__profile-mobile {
-      color: $main-font-color;
-      font-size: 22px;
-      padding: 7px 25px;
-    }
-
-    &__link-mobile:hover,
-    &__profile-mobile:hover {
-      background-color: $main-bc-color;
-      border-radius: $border-radius-30;
-      transition: 0.3s;
-    }
-
-    &__logo-mobile {
-      color: $main-font-color;
-      margin-left: 100px;
-      z-index: 2;
-    }
-
-    &__search-mobile {
-      z-index: 2;
-      margin-left: 15px;
-    }
-
-    &__profile-mobile {
-      margin: 0 50px;
-      background-color: $third-bc-color;
-      border-radius: $border-radius-30;
-    }
   }
 }

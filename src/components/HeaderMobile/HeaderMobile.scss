@@ -1,0 +1,63 @@
+@import 'src/assets/styles/variables/variables';
+
+.header {
+  &__open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-color: $secondary-bc-color;
+    overflow: hidden;
+  }
+
+  &__menu {
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &__links-mobile {
+    margin: 25% auto;
+    padding: 0;
+  }
+
+  &__li-mobile {
+    list-style-type: none;
+    text-align: center;
+    margin: 20% 0;
+  }
+
+  &__link-mobile,
+  &__profile-mobile {
+    color: $main-font-color;
+    font-size: 22px;
+    padding: 7px 25px;
+  }
+
+  &__link-mobile:hover,
+  &__profile-mobile:hover {
+    background-color: $main-bc-color;
+    border-radius: $main-border-radius;
+    transition: 0.3s;
+  }
+
+  &__logo-mobile {
+    color: $main-font-color;
+    margin-left: 100px;
+    z-index: 2;
+  }
+
+  &__loupe--mobile {
+    z-index: 2;
+    margin-left: 15px;
+  }
+
+  &__profile-mobile {
+    margin: 0 50px;
+    background-color: $third-bc-color;
+    border-radius: $main-border-radius;
+  }
+}

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IMoviesData } from '../models';
+import { IActorFull, IMoviesData } from '../models';
 import { baseUrl, APIKEY } from './API';
 
 export const otherAPI = createApi({
@@ -25,6 +25,12 @@ export const otherAPI = createApi({
       }),
       providesTags: () => ['other'],
     }),
+    getActorInformation: build.query<IActorFull, string>({
+      query: (id) => ({
+        url: `/uk/API/Name/${APIKEY}/${id}`,
+      }),
+      providesTags: () => ['other'],
+    }),
   }),
 });
 
@@ -32,4 +38,5 @@ export const {
   useGetTop250MoviesQuery,
   useGetPopularMoviesQuery,
   useGetPopularTVsQuery,
+  useGetActorInformationQuery,
 } = otherAPI;

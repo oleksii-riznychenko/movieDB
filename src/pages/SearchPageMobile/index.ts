@@ -1,0 +1,1 @@
+export { SearchPageMobile } from './SearchPageMobile';

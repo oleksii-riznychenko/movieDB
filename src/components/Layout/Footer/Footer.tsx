@@ -10,7 +10,7 @@ import {
 import { Instagram, Facebook, Twitter, Telegram } from '@mui/icons-material';
 import { configLink } from '../../../router';
 import { FooterConfig } from './Footer.types';
-
+import logo from '../../../assets/logos/logo_transparent.png';
 import './Footer.scss';
 
 export const Footer = (): JSX.Element => {
@@ -42,8 +42,8 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer className="footer">
-      <Link to={configLink.home} className="footer__block footer__logo">
-        {t('logo')}
+      <Link to={configLink.home} className="footer__block">
+        <img src={logo} alt="logo" className="footer__logo" />
       </Link>
 
       <div className="footer__block footer__links">

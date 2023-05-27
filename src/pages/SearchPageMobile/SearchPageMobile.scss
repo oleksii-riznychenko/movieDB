@@ -31,11 +31,12 @@
   &__button {
     height: 40px;
     width: 150px;
-    font-size: $fs-16;
+    font-size: $secondary-font-size;
     border: 1px solid $main-font-color;
-    border-radius: $border-radius-30;
+    border-radius: $main-border-radius;
     color: $main-font-color;
     background-color: $main-bc-color;
+    cursor: pointer;
   }
 
   &__results {

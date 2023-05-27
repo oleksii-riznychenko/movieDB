@@ -1,6 +1,7 @@
 export const configLink = {
   home: '/',
-  search: '/search',
+  search: '/search/',
+  searchMobile: '/search-mobile',
   movies: '/movies',
   series: '/series',
   cartoons: '/cartoons',
@@ -9,7 +10,7 @@ export const configLink = {
   top250Films: '/top250Films',
   film: '/film/',
   fullCast: '/film/full-cast/',
-  actor: '/actor/',
+  person: '/person/',
   company: '/company/',
   director: '/director/',
   country: '/country/',

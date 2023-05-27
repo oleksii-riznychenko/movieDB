@@ -27,15 +27,13 @@ export const FilmCard = ({
         to={configLink.film + id}
         className="film-card__action-area"
       >
-        {imDbRating && (
-          <Chip
-            size="small"
-            color="success"
-            label={imDbRating ? imDbRating : 'Unrated'}
-            icon={<StarBorder />}
-            className="film-card__rate"
-          />
-        )}
+        <Chip
+          size="small"
+          color="success"
+          label={imDbRating || 'Unrated'}
+          icon={<StarBorder />}
+          className="film-card__rate"
+        />
         {year && (
           <Chip
             size="small"

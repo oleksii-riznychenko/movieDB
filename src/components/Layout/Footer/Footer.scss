@@ -10,13 +10,9 @@
   position: relative;
   padding: 0 3%;
 
-  &__block {
-    width: 33%;
-  }
-
   &__logo {
-    text-align: left;
-    color: $main-font-color;
+    height: 30px;
+    width: 140px;
   }
 
   &__links {
@@ -39,15 +35,13 @@
   .footer {
     height: 300px;
     flex-direction: column;
-    padding: 50px;
+    padding: 50px 0;
 
-    &__logo,
     &__rights,
     &__links {
       width: 100%;
     }
 
-    &__logo,
     &__rights {
       text-align: center;
     }

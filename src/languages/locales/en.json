@@ -15,13 +15,16 @@
     },
     "profile": "Profile"
   },
+  "footer": {
+    "copyright": "All rights reserved"
+  },
   "not-found": {
     "sorry": "Sorry something went wrong",
     "try-again": "Sorry, the page you are looking for cannot be found. Check the URL and try again.",
     "go-home": "Home"
   },
-  "footer": {
-    "copyright": "All rights reserved"
+  "search": {
+    "searchTitle": "Results by search"
   },
   "filmDetails": {
     "originalTitle": "Original title",
@@ -48,7 +51,9 @@
     "credits": "Credits",
     "height": "Height",
     "awards": "Awards",
-    "biography": "Biography"
+    "biography": "Biography",
+    "allFilms": "All films and series",
+    "knownFor": "Known for"
   },
   "modal": {
     "close": "Close"

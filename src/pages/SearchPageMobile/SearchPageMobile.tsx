@@ -1,12 +1,12 @@
 import axios from 'axios';
-import { FilmCard, GlobalLoader, Layout } from '../index';
+import { FilmCard, GlobalLoader, Layout } from '../../components';
 import React, { useState } from 'react';
 import { APIKEY, baseUrl } from '../../service/API';
-import './Search.scss';
+import './SearchPageMobile.scss';
 import { Grid } from '@mui/material';
 import { IMoviesDataDetail } from '../../models';
 
-export const Search = (): JSX.Element => {
+export const SearchPageMobile = (): JSX.Element => {
   const [searchMovie, setSearchMovie] = useState('');
   const [movies, setMovies] = useState<IMoviesDataDetail[]>([]);
   const [loading, setLoading] = useState(false);
@@ -63,7 +63,6 @@ export const Search = (): JSX.Element => {
                 </Grid>
               ))}
             </Grid>
-            {/*<button onClick={}>Load more</button>*/}
           </div>
         )}
       </div>

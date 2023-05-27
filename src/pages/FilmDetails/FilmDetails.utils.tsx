@@ -42,13 +42,13 @@ export const getTagsStar = (list: IStarShort[]): string | ReactNode => {
     ? list.map(({ id, name }) => (
         <Link
           key={id}
-          to={configLink.director + id}
+          to={configLink.person + id}
           className="film-details__link"
         >
           <TagsMovie key={id} label={name} />
         </Link>
       ))
-    : '';
+    : '-';
 };
 
 export const getRuntime = (runtimeMins: string, lang: string): string => {
