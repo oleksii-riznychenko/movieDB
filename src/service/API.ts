@@ -1,4 +1,4 @@
-export const APIKEY = 'k_ogwkpqpy';
+export const APIKEY = 'k_fxfqdsmb';
 // k_fxfqdsmb Dmytro 1
 // k_k97u1elw Dmytro 2
 // k_ogwkpqpy Dmytro 3

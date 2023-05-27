@@ -1,4 +1,4 @@
-import { ICastMovies, IKnownFor } from './';
+import { IKnownForDetails, ICastMoviesDetails } from './';
 
 export interface IActorFull {
   id: string;
@@ -10,7 +10,7 @@ export interface IActorFull {
   deathDate: string;
   awards: string;
   height: string;
-  knownFor: IKnownFor;
-  castMovies: ICastMovies[];
+  knownFor: IKnownForDetails[];
+  castMovies: ICastMoviesDetails[];
   errorMassage: string;
 }

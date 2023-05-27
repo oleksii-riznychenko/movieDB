@@ -20,7 +20,7 @@ export const HomePageFilmCard = ({
         >
           <div className="home-film-card-details">
             <div className="home-film-card-rating">
-              {imDbRating.length > 0 ? imDbRating : 'Unrated'}
+              {imDbRating || 'Unrated'}
             </div>
             <div className="home-film-card-year">{year}</div>
           </div>

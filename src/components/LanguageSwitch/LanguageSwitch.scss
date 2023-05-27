@@ -3,9 +3,9 @@
 .button {
   background-color: $main-bc-color;
   padding: 2px !important;
-  border-radius: $border-radius-30 !important;
-  box-shadow: none !important;
+  border-radius: $main-border-radius !important;
   border: 1px solid $main-font-color;
+  box-shadow: $main-box-shadow !important;
 }
 
 .lang-btn {
@@ -14,12 +14,12 @@
   border: none !important;
   background-color: $main-bc-color !important;
   padding: 0 !important;
-  border-radius: $border-radius-30 !important;
+  border-radius: $main-border-radius !important;
 }
 
 .lang-active {
   color: $secondary-bc-color !important;
   background-color: $main-font-color !important;
-  border-radius: $border-radius-30 !important;
+  border-radius: $main-border-radius !important;
   padding: 0 !important;
 }

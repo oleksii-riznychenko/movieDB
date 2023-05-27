@@ -13,16 +13,7 @@ export const titleAPI = createApi({
       }),
       providesTags: () => ['title'],
     }),
-    getActorInformation: build.query<IActorFull, string>({
-      query: (id) => ({
-        url: `/uk/API/Name/${APIKEY}/${id}`,
-      }),
-      providesTags: () => ['title'],
-    }),
   }),
 });
 
-export const {
-  useGetMoviesOrSeriesTVInformationQuery,
-  useGetActorInformationQuery,
-} = titleAPI;
+export const { useGetMoviesOrSeriesTVInformationQuery } = titleAPI;

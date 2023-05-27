@@ -1,0 +1,36 @@
+@import 'src/assets/styles/variables/variables';
+
+.header {
+  &__info {
+    background-color: $secondary-bc-color;
+    border-radius: $main-border-radius;
+    line-height: 0;
+    z-index: 1;
+  }
+
+  &__links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: $main-font-color;
+  }
+
+  &__li {
+    list-style-type: none;
+    padding: 18px 1px;
+  }
+
+  &__link {
+    color: $main-font-color;
+    margin: 3px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .header {
+    &__center-item {
+      margin-left: 0;
+    }
+  }
+}

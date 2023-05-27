@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables/variables';
+
+.name {
+  color: $main-font-color;
+  font-size: 18px;
+  margin: 0 10px 5px;
+}
+
+.name:hover {
+  color: $main-gray-color;
+}

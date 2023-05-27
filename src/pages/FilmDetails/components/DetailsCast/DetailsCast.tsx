@@ -30,7 +30,7 @@ export const DetailsCast = ({
         {actorList
           .slice(0, actorList.length > 5 ? 5 : actorList.length)
           .map((star) => (
-            <Link to={configLink.actor + star.id} key={star.name}>
+            <Link to={configLink.person + star.id} key={star.name}>
               <ListItemButton>
                 <ListItemAvatar>
                   <Avatar alt={star.name} src={star.image} />
@@ -42,12 +42,14 @@ export const DetailsCast = ({
                   >
                     {star.name}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    className="film-details__cast-description"
-                  >
-                    {t('filmDetails.as')} {star.asCharacter}
-                  </Typography>
+                  {star.asCharacter && (
+                    <Typography
+                      variant="body2"
+                      className="film-details__cast-description"
+                    >
+                      {t('filmDetails.as')} {star.asCharacter}
+                    </Typography>
+                  )}
                 </ListItemText>
               </ListItemButton>
             </Link>

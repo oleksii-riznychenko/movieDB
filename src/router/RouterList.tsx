@@ -7,9 +7,11 @@ import {
   TopSeries,
   Top250Films,
   FilmDetails,
-  ActorDetails,
+  PersonDetails,
+  SearchPage,
+  TopCartoons,
+  SearchPageMobile,
 } from '../pages';
-import { Search } from '../components/Search';
 
 export const RouterList = (): JSX.Element => {
   return (
@@ -17,10 +19,12 @@ export const RouterList = (): JSX.Element => {
       <Route path={configLink.home} element={<HomePage />} />
       <Route path={configLink.movies} element={<TopMovies />} />
       <Route path={configLink.series} element={<TopSeries />} />
+      <Route path={configLink.cartoons} element={<TopCartoons />} />
       <Route path={configLink.top250Films} element={<Top250Films />} />
       <Route path={`${configLink.film}:id`} element={<FilmDetails />} />
-      <Route path={`${configLink.actor}:id`} element={<ActorDetails />} />
-      <Route path={configLink.search} element={<Search />} />
+      <Route path={`${configLink.person}:id`} element={<PersonDetails />} />
+      <Route path={`${configLink.search}:id`} element={<SearchPage />} />
+      <Route path={configLink.searchMobile} element={<SearchPageMobile />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

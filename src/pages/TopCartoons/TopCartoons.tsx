@@ -1,22 +1,9 @@
-import { useGetPopularMoviesQuery } from '../../service/OthersService';
-import { FilmCatalog } from '../../components/FilmCatalog';
+import { Layout } from '../../components';
 
-import { useTranslation } from 'react-i18next';
-import { LANG } from '../../components';
-import i18n from 'i18next';
-
-export const TopCartoons = () => {
-  const { t } = useTranslation();
-
-  const { data, isLoading } = useGetPopularMoviesQuery(
-    i18n.language === LANG.UA ? 'uk' : LANG.EN
-  );
-
+export const TopCartoons = (): JSX.Element => {
   return (
-    <FilmCatalog
-      data={data}
-      isLoading={isLoading}
-      title={t('titles.popularCartoons')}
-    />
+    <Layout>
+      <span>Sorry. Mistake</span>
+    </Layout>
   );
 };

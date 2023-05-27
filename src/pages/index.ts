@@ -4,4 +4,7 @@ export { TopMovies } from './TopMovies';
 export { TopSeries } from './TopSeries';
 export { Top250Films } from './Top250Films';
 export { FilmDetails } from './FilmDetails';
-export { ActorDetails } from './ActorDetails';
+export { PersonDetails } from './PersonDetails';
+export { TopCartoons } from './TopCartoons';
+export { SearchPage } from './SearchPage';
+export { SearchPageMobile } from './SearchPageMobile';

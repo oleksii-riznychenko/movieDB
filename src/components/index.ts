@@ -5,3 +5,6 @@ export { GlobalLoader } from './GlobalLoader';
 export { PagePagination } from './PagePagination';
 export { LanguageSwitch, LANG } from './LanguageSwitch';
 export { HomePageFilmCard } from './HomePageFilmCard';
+export { HeaderList } from './HeaderList';
+export { HeaderMobile } from './HeaderMobile';
+export { HeaderCentralItem } from './HeaderCentralItem';
