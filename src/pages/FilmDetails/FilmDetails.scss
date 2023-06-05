@@ -90,7 +90,13 @@
   }
 
   &__background {
+    display: block;
     background-color: $main-bc-color !important;
+    transition: 1s !important;
+  }
+
+  &__background:hover {
+    background-color: $third-bc-color !important;
   }
 
   &__trailer {

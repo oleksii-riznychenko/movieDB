@@ -17,31 +17,52 @@
   &__menu {
     cursor: pointer;
     z-index: 2;
+    border-radius: 3px;
+    padding: 1px 3px;
+    transform: scale(135%);
+  }
+
+  &__menu:hover {
+    transition: 0.5s;
+    transform: scale(145%);
+    background-color: $third-bc-color;
   }
 
   &__links-mobile {
-    margin: 25% auto;
+    margin: 10% auto;
     padding: 0;
   }
 
   &__li-mobile {
     list-style-type: none;
     text-align: center;
-    margin: 20% 0;
+    margin: 15% 0;
   }
 
   &__link-mobile,
   &__profile-mobile {
+    display: block;
+    text-align: center;
+    width: 250px;
+    height: 50px;
     color: $main-font-color;
     font-size: 22px;
     padding: 7px 25px;
+    background-color: $fourth-bc-color;
+    border: 1px solid $fifth-bc-color;
+    border-radius: $main-border-radius;
+    transition: ease-out 0.5s;
+    letter-spacing: 1px;
+  }
+
+  &__profile-mobile {
+    background-color: $fifth-bc-color;
   }
 
   &__link-mobile:hover,
   &__profile-mobile:hover {
-    background-color: $main-bc-color;
-    border-radius: $main-border-radius;
-    transition: 0.3s;
+    box-shadow: inset 0 -100px 0 0 $third-bc-color;
+    transform: scale(105%);
   }
 
   &__logo-mobile {
@@ -53,11 +74,13 @@
   &__loupe--mobile {
     z-index: 2;
     margin-left: 15px;
+    border-radius: $main-border-radius;
+    padding: 3px 5px;
   }
 
-  &__profile-mobile {
-    margin: 0 50px;
+  &__loupe--mobile:hover {
+    transition: 0.5s;
+    transform: scale(115%);
     background-color: $third-bc-color;
-    border-radius: $main-border-radius;
   }
 }

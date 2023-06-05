@@ -1,11 +1,11 @@
 import { Menu, Search as SearchIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logos/logo_transparent.png';
-import { LanguageSwitch } from '../LanguageSwitch';
+import logo from '../../../../../assets/logos/logo_transparent.png';
+import { LanguageSwitch } from '../../../../LanguageSwitch';
 import { NavLink } from 'react-router-dom';
 import React, { useMemo, useState } from 'react';
-import { HeaderItem } from '../Layout/Header/Header.types';
-import { configLink } from '../../router';
+import { HeaderItem } from '../../Header.types';
+import { configLink } from '../../../../../router';
 import { useTranslation } from 'react-i18next';
 import './HeaderMobile.scss';
 

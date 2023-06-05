@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IActorFull, ITitleData } from '../models';
+import { IImageData, ITitleData } from '../models';
 import { baseUrl, APIKEY } from './API';
 
 export const titleAPI = createApi({
@@ -13,7 +13,14 @@ export const titleAPI = createApi({
       }),
       providesTags: () => ['title'],
     }),
+    getImage: build.query<IImageData, string>({
+      query: (id) => ({
+        url: `/uk/API/Images/${APIKEY}/${id}/Short`,
+      }),
+      providesTags: () => ['title'],
+    }),
   }),
 });
 
-export const { useGetMoviesOrSeriesTVInformationQuery } = titleAPI;
+export const { useGetMoviesOrSeriesTVInformationQuery, useGetImageQuery } =
+  titleAPI;

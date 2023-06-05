@@ -1,11 +1,13 @@
 import { Search as SearchIcon } from '@mui/icons-material';
 import React, { useState } from 'react';
-import { configLink } from '../../router';
+import { configLink } from '../../../../../router';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { HeaderList } from '../HeaderList';
 import './HeaderCentralItem.scss';
 
 export const HeaderCentralItem = (): JSX.Element => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchMovie, setSearchMovie] = useState('');
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
@@ -38,6 +40,7 @@ export const HeaderCentralItem = (): JSX.Element => {
               value={searchMovie}
               onChange={handleInputChange}
               className="header__input"
+              placeholder={t('search.placeholder') || ''}
             />
           </label>
           <button

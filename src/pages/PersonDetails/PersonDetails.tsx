@@ -1,29 +1,17 @@
 import React, { useMemo } from 'react';
 import { GlobalLoader, Layout } from '../../components';
-import { useGetActorInformationQuery } from '../../service/OthersService';
+import { useGetPersonInformationQuery } from '../../service/OthersService';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { PersonKnownFor } from './components/PersonKnownFor';
 import './PersonDetails.scss';
 import { PersonAllFilms } from './components/PersonAllFilms';
-import { APIKEY, baseUrl } from '../../service/API';
-import { IPersonImages } from '../../models';
 
 export const PersonDetails = (): JSX.Element => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const params = useParams();
-  const { data, isLoading } = useGetActorInformationQuery(String(params.id));
+  const { data, isLoading } = useGetPersonInformationQuery(String(params.id));
   let biography;
-  const fetchImage = async () => {
-    try {
-      const response = await fetch(
-        `${baseUrl}/en/API/Images/${APIKEY}/$\{data?.id}`
-      );
-      const d = await response.json();
-    } catch (error) {
-      console.error('Error fetching image:', error);
-    }
-  };
 
   // let information;
 

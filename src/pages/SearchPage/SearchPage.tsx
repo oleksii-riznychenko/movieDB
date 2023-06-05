@@ -20,7 +20,7 @@ export const SearchPage = (): JSX.Element => {
 
       try {
         const response = await axios.get<{ results: IMoviesDataDetail[] }>(
-          `${baseUrl}/en/API/SearchAll/${APIKEY}/${params.id}`
+          `${baseUrl}/en/API/Search/${APIKEY}/${params.id}`
         );
         setMovies(response.data.results);
       } catch (error) {

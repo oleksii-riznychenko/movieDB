@@ -1,8 +1,15 @@
+@import 'src/assets/styles/variables/variables';
+
 .search-page {
   text-align: center;
 
   &__title {
     font-size: 20px;
     margin-bottom: 30px;
+    padding: 15px 30px;
+    background-color: $fourth-bc-color;
+    border: 3px solid $main-font-color;
+    border-radius: $main-border-radius;
+    letter-spacing: 1px;
   }
 }

@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 import React, { useMemo } from 'react';
-import { HeaderItem } from '../Layout/Header/Header.types';
-import { configLink } from '../../router';
+import { HeaderItem } from '../../Header.types';
+import { configLink } from '../../../../../router';
 import { useTranslation } from 'react-i18next';
 import './HeaderList.scss';
 
@@ -41,13 +41,13 @@ export const HeaderList = () => {
   );
 
   return (
-    <div className="header__info">
+    <div className="header__list">
       <ul className="header__links">
         {config.map(({ id, link, title }) => (
-          <li className="header__li" key={id}>
+          <li className="header__link" key={id}>
             <NavLink
               className={({ isActive }) =>
-                classNames('header__link', {
+                classNames('header__link--item', {
                   'is-active': isActive,
                 })
               }

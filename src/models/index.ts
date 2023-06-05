@@ -27,3 +27,6 @@ export type { IPersonAllFilms } from './IPersonAllFilms';
 export type { IPersonKnownFor } from './IPersonKnownFor';
 export type { IPersonImages } from './IPersonImages';
 export type { IPersonImagesItems } from './IPersonImagesItems';
+export type { INowInTheaters } from './INowInTheaters';
+export type { INowInTheatersDetails } from './INowInTheatersDetails';
+export type { INowInTheatersStars } from './INowInTheatersStars';
