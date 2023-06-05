@@ -13,6 +13,12 @@ export const otherAPI = createApi({
       }),
       providesTags: () => ['other'],
     }),
+    getTop250TVs: build.query<IMoviesData, string>({
+      query: (lang = 'en') => ({
+        url: `/${lang}/API/Top250TVs/${APIKEY}`,
+      }),
+      providesTags: () => ['other'],
+    }),
     getPopularMovies: build.query<IMoviesData, string>({
       query: (lang = 'en') => ({
         url: `/${lang}/API/MostPopularMovies/${APIKEY}`,
@@ -25,7 +31,31 @@ export const otherAPI = createApi({
       }),
       providesTags: () => ['other'],
     }),
-    getActorInformation: build.query<IActorFull, string>({
+    getInTheaters: build.query<IMoviesData, string>({
+      query: (lang = 'en') => ({
+        url: `/${lang}/API/InTheaters/${APIKEY}`,
+      }),
+      providesTags: () => ['other'],
+    }),
+    getComingSoon: build.query<IMoviesData, string>({
+      query: (lang = 'en') => ({
+        url: `/${lang}/API/ComingSoon/${APIKEY}`,
+      }),
+      providesTags: () => ['other'],
+    }),
+    getBoxOffice: build.query<IMoviesData, string>({
+      query: (lang = 'en') => ({
+        url: `/${lang}/API/BoxOffice/${APIKEY}`,
+      }),
+      providesTags: () => ['other'],
+    }),
+    getBoxOfficeAllTime: build.query<IMoviesData, string>({
+      query: (lang = 'en') => ({
+        url: `/${lang}/API/BoxOfficeAllTime/${APIKEY}`,
+      }),
+      providesTags: () => ['other'],
+    }),
+    getPersonInformation: build.query<IActorFull, string>({
       query: (id) => ({
         url: `/uk/API/Name/${APIKEY}/${id}`,
       }),
@@ -36,7 +66,12 @@ export const otherAPI = createApi({
 
 export const {
   useGetTop250MoviesQuery,
+  useGetTop250TVsQuery,
   useGetPopularMoviesQuery,
+  useGetInTheatersQuery,
+  useGetComingSoonQuery,
+  useGetBoxOfficeQuery,
+  useGetBoxOfficeAllTimeQuery,
   useGetPopularTVsQuery,
-  useGetActorInformationQuery,
+  useGetPersonInformationQuery,
 } = otherAPI;

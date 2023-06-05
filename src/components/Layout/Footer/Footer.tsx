@@ -42,19 +42,19 @@ export const Footer = (): JSX.Element => {
 
   return (
     <footer className="footer">
-      <Link to={configLink.home} className="footer__block">
+      <Link to={configLink.home}>
         <img src={logo} alt="logo" className="footer__logo" />
       </Link>
 
-      <div className="footer__block footer__links">
+      <div className="footer__links">
         {config.links.map(({ link, Icon }) => (
-          <Link key={link} to={link}>
-            <Icon className="footer__link" />
+          <Link key={link} to={link} className="footer__link">
+            <Icon className="footer__link--item" />
           </Link>
         ))}
       </div>
 
-      <div className="footer__block footer__rights">
+      <div className="footer__rights">
         <div>&copy;&nbsp;{config.currentYear}</div>
         <div>{t('footer.copyright')}</div>
       </div>

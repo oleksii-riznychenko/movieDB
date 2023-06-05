@@ -28,7 +28,6 @@
     object-fit: cover;
     border: 1px solid $main-bc-color;
     border-radius: $main-border-radius;
-    box-shadow: $main-box-shadow;
   }
 
   &__about {
@@ -54,7 +53,6 @@
     height: max-content;
     background-color: $main-bc-color;
     border-radius: $main-border-radius;
-    box-shadow: $main-box-shadow;
 
     &--title {
       margin: 15px auto;

@@ -2,11 +2,13 @@ import axios from 'axios';
 import { FilmCard, GlobalLoader, Layout } from '../../components';
 import React, { useState } from 'react';
 import { APIKEY, baseUrl } from '../../service/API';
-import './SearchPageMobile.scss';
 import { Grid } from '@mui/material';
 import { IMoviesDataDetail } from '../../models';
+import { useTranslation } from 'react-i18next';
+import './SearchPageMobile.scss';
 
 export const SearchPageMobile = (): JSX.Element => {
+  const { t } = useTranslation();
   const [searchMovie, setSearchMovie] = useState('');
   const [movies, setMovies] = useState<IMoviesDataDetail[]>([]);
   const [loading, setLoading] = useState(false);
@@ -33,25 +35,30 @@ export const SearchPageMobile = (): JSX.Element => {
 
   return (
     <Layout>
-      <div className="search-page">
+      <div className="search-page-mobile">
         <form onSubmit={handleSearch}>
-          <label className="search-page__label">
-            <span className="search-page__title">Search films and series</span>
-            <input
-              type="text"
-              value={searchMovie}
-              onChange={handleInputChange}
-              className="search-page__input"
-            />
+          <label className="search-page-mobile__label">
+            <span className="search-page-mobile__title">
+              {t('search.searchTitleMobile')}
+            </span>
+            <div>
+              <input
+                type="text"
+                value={searchMovie}
+                onChange={handleInputChange}
+                className="search-page-mobile__input"
+                placeholder={t('search.placeholder') || ''}
+              />
+              <button type="submit" className="search-page-mobile__button">
+                {t('search.searchButton')}
+              </button>
+            </div>
           </label>
-          <button type="submit" className="search-page__button">
-            Search
-          </button>
         </form>
         {loading ? (
           <GlobalLoader />
         ) : (
-          <div className="search-page__results">
+          <div className="search-page-mobile__results">
             <Grid
               container
               spacing={{ xs: 2, md: 1 }}

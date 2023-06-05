@@ -1,0 +1,1 @@
+export { BoxOffice } from './BoxOffice';

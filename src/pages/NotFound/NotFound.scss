@@ -12,10 +12,14 @@
   border-radius: $main-border-radius;
   color: $main-font-color;
   padding: 70px;
-  box-shadow: $secondary-box-shadow;
 
   &__number {
+    margin: 0 auto;
+    padding: 5px 20px;
     font-size: 80px;
+    border-radius: $main-border-radius;
+    background-color: $third-bc-color;
+    width: max-content;
   }
 
   &__sorry {
@@ -27,14 +31,20 @@
     font-size: 20px;
   }
 
-  &__go-home {
+  &__button {
     width: 150px;
     color: $main-font-color;
     background-color: $secondary-bc-color;
     margin: 30px auto;
-    border: 1px solid $main-font-color;
+    border: 1px solid $fifth-bc-color;
     border-radius: $main-border-radius;
     padding: 5px;
+    transition: ease-out 0.5s;
+    letter-spacing: 1px;
+  }
+
+  &__button:hover {
+    box-shadow: inset 0 -100px 0 0 $third-bc-color;
   }
 }
 

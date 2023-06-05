@@ -2,8 +2,13 @@
   "logo": "LOGO",
   "titles": {
     "top250Movies": "Top 250 Movies",
+    "top250TVs": "Top 250 Series",
     "popularMovies": "Top Popular Films",
-    "popularSeries": "Top Popular Series"
+    "popularSeries": "Top Popular Series",
+    "inTheaters": "In Theaters",
+    "comingSoon": "Coming Soon",
+    "boxOffice": "Box Office",
+    "boxOfficeAllTime": "Box Office All Time"
   },
   "header": {
     "menu": {
@@ -15,6 +20,12 @@
     },
     "profile": "Profile"
   },
+  "home-page": {
+    "banner": {
+      "from": "from",
+      "watch": "WATCH"
+    }
+  },
   "footer": {
     "copyright": "All rights reserved"
   },
@@ -24,7 +35,10 @@
     "go-home": "Home"
   },
   "search": {
-    "searchTitle": "Results by search"
+    "searchTitle": "Results by search",
+    "searchTitleMobile": "Search films and series",
+    "placeholder": "Type here...",
+    "searchButton": "Search"
   },
   "filmDetails": {
     "originalTitle": "Original title",

@@ -1,0 +1,14 @@
+@import 'src/assets/styles/variables/variables';
+
+.page-title {
+  display: block;
+  width: max-content;
+  margin-bottom: 15px !important;
+  padding: 5px 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  background-color: $fourth-bc-color;
+  border: 1px solid $fifth-bc-color;
+  border-radius: $main-border-radius;
+  color: $main-font-color;
+}

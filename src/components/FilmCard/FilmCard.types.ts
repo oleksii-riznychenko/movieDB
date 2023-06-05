@@ -3,6 +3,6 @@ export interface IFilmCard {
   year?: string;
   title: string;
   image: string;
-  imDbRating: string;
+  imDbRating?: string;
   className?: string;
 }

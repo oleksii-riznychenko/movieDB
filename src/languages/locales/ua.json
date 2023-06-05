@@ -1,9 +1,13 @@
 {
-  "logo": "ЛОГО",
   "titles": {
     "top250Movies": "Топ 250 фільмів",
-    "popularMovies": "Популярні Фільми",
-    "popularSeries": "Популярні Серіали"
+    "top250TVs": "Топ 250 серіалів",
+    "popularMovies": "Популярні фільми",
+    "popularSeries": "Популярні серіали",
+    "inTheaters": "У кінотеатрах",
+    "comingSoon": "Скоро у кіно",
+    "boxOffice": "Бокс офіс",
+    "boxOfficeAllTime": "Бокс офіс за весь час"
   },
   "header": {
     "menu": {
@@ -15,6 +19,12 @@
     },
     "profile": "Профіль"
   },
+  "home-page": {
+    "banner": {
+      "from": "від",
+      "watch": "ДИВИТИСЯ"
+    }
+  },
   "footer": {
     "copyright": "Всі права захищені"
   },
@@ -24,7 +34,10 @@
     "go-home": "На головну"
   },
   "search": {
-    "searchTitle": "Результати за пошуком"
+    "searchTitle": "Результати за пошуком",
+    "searchTitleMobile": "Пошук фільмів і серіалів",
+    "placeholder": "Введіть запит...",
+    "searchButton": "Пошук"
   },
   "filmDetails": {
     "originalTitle": "Оригінальна назва",

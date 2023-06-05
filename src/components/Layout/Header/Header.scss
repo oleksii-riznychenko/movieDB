@@ -1,11 +1,5 @@
 @import 'src/assets/styles/variables/variables';
 
-.is-active {
-  background-color: $third-bc-color;
-  border-radius: $main-border-radius;
-  box-shadow: $secondary-box-shadow;
-}
-
 .header {
   width: 100%;
   height: 70px;
@@ -15,19 +9,31 @@
   background-color: $main-bc-color;
   padding: 0 3%;
   z-index: 1;
-  box-shadow: $secondary-box-shadow;
 
   &__logo {
     height: 35px;
     width: 140px;
+    transition: 1s;
+  }
+
+  &__logo:hover {
+    box-shadow: inset 0 -100px 0 0 $third-bc-color;
   }
 
   &__right-side {
     display: flex;
+    align-items: center;
   }
 
   &__profile {
     color: $main-font-color;
-    margin-left: 15px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: $main-border-radius;
+    transition: 1s;
+  }
+
+  &__profile:hover {
+    box-shadow: inset 0 -100px 0 0 $third-bc-color;
   }
 }
