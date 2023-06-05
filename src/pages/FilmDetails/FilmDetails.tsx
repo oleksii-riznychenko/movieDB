@@ -22,7 +22,7 @@ export const FilmDetails = (): JSX.Element => {
       <Container maxWidth="xl" className="film-details">
         {isLoading ? (
           <GlobalLoader />
-        ) : data ? (
+        ) : data && !data?.errorMessage ? (
           <Stack spacing={2}>
             <Stack
               spacing={4}

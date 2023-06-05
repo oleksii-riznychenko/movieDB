@@ -10,7 +10,7 @@ export const getTagsByKeyValue = (
   lang: string,
   link: string
 ): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ key, value }) => {
         const validVal = lang === LANG.UA ? value : key;
 
@@ -24,7 +24,7 @@ export const getTagsByKeyValue = (
 };
 
 export const getTagsCompany = (list: ICompanyShort[]): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ id, name }) => (
         <Link
           key={id}
@@ -38,7 +38,7 @@ export const getTagsCompany = (list: ICompanyShort[]): string | ReactNode => {
 };
 
 export const getTagsStar = (list: IStarShort[]): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ id, name }) => (
         <Link
           key={id}
@@ -68,7 +68,9 @@ export const getValidBudget = (
   budget: string,
   cumulativeWorldwideGross: string
 ): string => {
-  if (budget.includes(' ')) budget = budget.slice(0, budget.indexOf(' '));
+  if (budget && budget.includes(' ')) {
+    budget = budget.slice(0, budget.indexOf(' '));
+  }
 
   return `${budget} / ${cumulativeWorldwideGross}`;
 };

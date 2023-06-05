@@ -28,8 +28,8 @@ export const DetailsCast = ({
       </Box>
       <List className="film-details__row film-details__cast-list">
         {actorList
-          .slice(0, actorList.length > 5 ? 5 : actorList.length)
-          .map((star) => (
+          ?.slice(0, actorList.length > 5 ? 5 : actorList.length)
+          ?.map((star) => (
             <Link to={configLink.actor + star.id} key={star.name}>
               <ListItemButton>
                 <ListItemAvatar>
