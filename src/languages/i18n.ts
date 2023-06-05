@@ -1,31 +1,40 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import detector from 'i18next-browser-languagedetector';
 import UA from './locales/ua.json';
 import EN from './locales/en.json';
-
-const lang = localStorage.getItem('i18nextLng');
+import { LangEnum } from '../models';
+import { persistor, store } from '../store';
 
 const resources = {
-  ua: {
+  [LangEnum.UA]: {
     translation: UA,
   },
-  en: {
+  [LangEnum.EN]: {
     translation: EN,
   },
 };
 
-i18n
-  .use(detector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    lng: lang || 'ua',
-    interpolation: {
-      escapeValue: false,
-    },
-  })
-  .then();
+const initializeI18n = (
+  initialLanguage: LangEnum.UA | LangEnum.EN = LangEnum.UA
+): void => {
+  i18n
+    .use(initReactI18next)
+    .init({
+      resources,
+      lng: initialLanguage,
+      interpolation: {
+        escapeValue: false,
+      },
+    })
+    .then();
+};
+
+persistor.persist();
+persistor.subscribe(() => {
+  const initialLanguage = store.getState().root.language;
+
+  initializeI18n(initialLanguage || LangEnum.UA);
+});
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {

@@ -30,3 +30,4 @@ export type { IPersonImagesItems } from './IPersonImagesItems';
 export type { INowInTheaters } from './INowInTheaters';
 export type { INowInTheatersDetails } from './INowInTheatersDetails';
 export type { INowInTheatersStars } from './INowInTheatersStars';
+export { LangEnum } from './IRoot';

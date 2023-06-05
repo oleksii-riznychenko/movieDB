@@ -1,33 +1,37 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Box, Button, ButtonGroup } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { ILangConfig, LANG } from './LanguageSwitch.types';
+import { ILangConfig } from './LanguageSwitch.types';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { LANG, updateLanguage } from '../../slices/rootSlice';
+import { LangEnum } from '../../models';
 import './LanguageSwitch.scss';
 
 export const LanguageSwitch = (): JSX.Element => {
   const { i18n } = useTranslation();
-  const [languages, setLanguages] = useState<string>(i18n.language);
+  const dispatch = useAppDispatch();
+  const language = useAppSelector((state) => state.root.language);
 
-  const changeLanguage = (lang: string): void => {
-    i18n.changeLanguage(lang).then();
-    localStorage.setItem('i18nextLng', i18n.language);
-    setLanguages(i18n.language);
+  const changeLanguage = (lang: LANG): void => {
+    i18n.changeLanguage(lang).then(() => {
+      dispatch(updateLanguage(lang));
+    });
   };
 
   const config: ILangConfig[] = useMemo(
     () => [
       {
-        lang: LANG.UA,
-        className: languages === LANG.UA ? 'lang-active' : '',
-        handleClick: (): void => changeLanguage(LANG.UA),
+        lang: LangEnum.UA,
+        className: language === LangEnum.UA ? 'lang-active' : '',
+        handleClick: (): void => changeLanguage(LangEnum.UA),
       },
       {
-        lang: LANG.EN,
-        className: languages === LANG.EN ? 'lang-active' : '',
-        handleClick: (): void => changeLanguage(LANG.EN),
+        lang: LangEnum.EN,
+        className: language === LangEnum.EN ? 'lang-active' : '',
+        handleClick: (): void => changeLanguage(LangEnum.EN),
       },
     ],
-    [languages]
+    [language]
   );
 
   return (

@@ -1,15 +1,15 @@
 import { useGetPopularMoviesQuery } from '../../service/OthersService';
 import { FilmCatalog } from '../../components/FilmCatalog';
-
 import { useTranslation } from 'react-i18next';
-import { LANG } from '../../components';
-import i18n from 'i18next';
+import { useAppSelector } from '../../hooks/redux';
+import { LangEnum } from '../../models';
 
 export const TopMovies = () => {
   const { t } = useTranslation();
+  const language = useAppSelector((state) => state.root.language);
 
   const { data, isLoading } = useGetPopularMoviesQuery(
-    i18n.language === LANG.UA ? 'uk' : LANG.EN
+    language === LangEnum.UA ? LangEnum.UK : LangEnum.EN
   );
 
   return (
