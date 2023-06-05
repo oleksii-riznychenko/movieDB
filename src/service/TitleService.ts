@@ -1,6 +1,9 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { IImageData, ITitleData } from '../models';
-import { baseUrl, APIKEY } from './API';
+import { baseUrl } from './API';
+import { store } from '../store';
+
+const initialLanguage: string = store.getState().apiKey.activeApiKey;
 
 export const titleAPI = createApi({
   reducerPath: 'titleAPI',
@@ -9,13 +12,13 @@ export const titleAPI = createApi({
   endpoints: (build) => ({
     getMoviesOrSeriesTVInformation: build.query<ITitleData, string>({
       query: (id) => ({
-        url: `/uk/API/Title/${APIKEY}/${id}/FullActor,Posters,Images,Trailer,Ratings,Wikipedia`,
+        url: `/uk/API/Title/${initialLanguage}/${id}/FullActor,Posters,Images,Trailer,Ratings,Wikipedia`,
       }),
       providesTags: () => ['title'],
     }),
     getImage: build.query<IImageData, string>({
       query: (id) => ({
-        url: `/uk/API/Images/${APIKEY}/${id}/Short`,
+        url: `/uk/API/Images/${initialLanguage}/${id}/Short`,
       }),
       providesTags: () => ['title'],
     }),

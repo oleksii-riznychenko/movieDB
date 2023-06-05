@@ -27,33 +27,34 @@ export const DetailsCast = ({
         </Typography>
       </Box>
       <List className="film-details__row film-details__cast-list">
-        {actorList
-          .slice(0, actorList.length > 5 ? 5 : actorList.length)
-          .map((star) => (
-            <Link to={configLink.person + star.id} key={star.name}>
-              <ListItemButton>
-                <ListItemAvatar>
-                  <Avatar alt={star.name} src={star.image} />
-                </ListItemAvatar>
-                <ListItemText>
-                  <Typography
-                    variant="body1"
-                    className="film-details__cast-name"
-                  >
-                    {star.name}
-                  </Typography>
-                  {star.asCharacter && (
+        {actorList &&
+          actorList
+            .slice(0, actorList.length > 5 ? 5 : actorList.length)
+            .map((star) => (
+              <Link to={configLink.person + star.id} key={star.name}>
+                <ListItemButton>
+                  <ListItemAvatar>
+                    <Avatar alt={star.name} src={star.image} />
+                  </ListItemAvatar>
+                  <ListItemText>
                     <Typography
-                      variant="body2"
-                      className="film-details__cast-description"
+                      variant="body1"
+                      className="film-details__cast-name"
                     >
-                      {t('filmDetails.as')} {star.asCharacter}
+                      {star.name}
                     </Typography>
-                  )}
-                </ListItemText>
-              </ListItemButton>
-            </Link>
-          ))}
+                    {star.asCharacter && (
+                      <Typography
+                        variant="body2"
+                        className="film-details__cast-description"
+                      >
+                        {t('filmDetails.as')} {star.asCharacter}
+                      </Typography>
+                    )}
+                  </ListItemText>
+                </ListItemButton>
+              </Link>
+            ))}
       </List>
       <Box className="film-details__row film-details__redirect-link">
         <Link to={configLink.fullCast + filmId}>

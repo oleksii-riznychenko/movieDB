@@ -1,10 +1,7 @@
-export const LANG: { UA: string; EN: string } = {
-  UA: 'ua',
-  EN: 'en',
-};
+import { LangEnum } from '../../models';
 
 export interface ILangConfig {
-  lang: typeof LANG.UA | typeof LANG.EN;
   className: string;
   handleClick: () => void;
+  lang: LangEnum.UA | LangEnum.EN;
 }

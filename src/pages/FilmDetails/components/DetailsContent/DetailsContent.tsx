@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import {
   AlertMovie,
+  ModalMovie,
   ButtonMovie,
   IconButtonMovie,
-  ModalMovie,
 } from '../../../../design-system';
 import {
   Link,
@@ -15,13 +15,22 @@ import {
 import { DetailsTable } from '../DetailsTable';
 import { IDetailsContent } from './DetailsContent.types';
 import { useTranslation } from 'react-i18next';
-import { LANG } from '../../../../components';
-import { savedFilms } from '../../../../utils/constants';
+import { useAppDispatch, useAppSelector } from '../../../../hooks/redux';
+import { LangEnum } from '../../../../models';
+import {
+  saveFilmToBookmarks,
+  removeFilmFromBookmarks,
+  FilmBookmark,
+} from '../../../../slices/rootSlice';
 
 export const DetailsContent = ({ data }: IDetailsContent) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const language = useAppSelector((state) => state.root.language);
+  const filmBookmarks: FilmBookmark[] = useAppSelector((state) =>
+    JSON.parse(state.root.filmBookmarks)
+  );
+  const dispatch = useAppDispatch();
   const [filmSaved, setFilmSaved] = useState<boolean>(false);
-  const [, setSavedFilmsForLocalStorage] = useState<string[]>([]);
   const [openAlert, setOpenAlert] = useState(false);
   const [openTrailer, setOpenTrailer] = useState<boolean>(false);
 
@@ -31,22 +40,10 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
   const handleSaveFilm = () => {
     if (filmSaved) {
       setFilmSaved(false);
-      setSavedFilmsForLocalStorage((prev) => {
-        const index = prev.findIndex((film) => film === data.id);
-
-        if (index !== -1) prev.splice(index, 1);
-        localStorage.setItem(savedFilms, JSON.stringify(prev));
-
-        return prev;
-      });
+      if (data.id) dispatch(removeFilmFromBookmarks(data.id));
     } else {
       setFilmSaved(true);
-      setSavedFilmsForLocalStorage((prev) => {
-        if (!prev.includes(data.id)) prev.push(data.id);
-        localStorage.setItem(savedFilms, JSON.stringify(prev));
-
-        return prev;
-      });
+      if (data.id) dispatch(saveFilmToBookmarks(data.id));
     }
   };
   const handleCopyLink = () => {
@@ -58,12 +55,8 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
   const handleClose = () => setOpenAlert(false);
 
   useEffect(() => {
-    const getSavedFilms: string[] = JSON.parse(
-      localStorage.getItem(savedFilms) || '[]'
-    );
-    const filmVal = getSavedFilms.find((film) => film === data.id);
+    const filmVal = filmBookmarks?.find((film) => film === data.id);
 
-    setSavedFilmsForLocalStorage(getSavedFilms);
     setFilmSaved(!!filmVal);
   }, []);
 
@@ -125,7 +118,7 @@ export const DetailsContent = ({ data }: IDetailsContent) => {
       </Box>
       <Box className="film-details__row">
         <Typography variant="body2" className="film-details__description">
-          {i18n.language === LANG.UA ? data.plotLocal : data.plot}
+          {language === LangEnum.UA ? data.plotLocal : data.plot}
         </Typography>
       </Box>
       <Box className="film-details__row">

@@ -1,6 +1,10 @@
 import { ReactNode } from 'react';
-import { ICompanyShort, IKeyValueItem, IStarShort } from '../../models';
-import { LANG } from '../../components';
+import {
+  LangEnum,
+  IStarShort,
+  ICompanyShort,
+  IKeyValueItem,
+} from '../../models';
 import { TagsMovie } from '../../design-system';
 import { Link } from 'react-router-dom';
 import { configLink } from '../../router';
@@ -10,9 +14,9 @@ export const getTagsByKeyValue = (
   lang: string,
   link: string
 ): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ key, value }) => {
-        const validVal = lang === LANG.UA ? value : key;
+        const validVal = lang === LangEnum.UA ? value : key;
 
         return (
           <Link key={key} className="film-details__link" to={link + key}>
@@ -24,7 +28,7 @@ export const getTagsByKeyValue = (
 };
 
 export const getTagsCompany = (list: ICompanyShort[]): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ id, name }) => (
         <Link
           key={id}
@@ -38,7 +42,7 @@ export const getTagsCompany = (list: ICompanyShort[]): string | ReactNode => {
 };
 
 export const getTagsStar = (list: IStarShort[]): string | ReactNode => {
-  return list.length > 0
+  return list?.length > 0
     ? list.map(({ id, name }) => (
         <Link
           key={id}
@@ -55,7 +59,7 @@ export const getRuntime = (runtimeMins: string, lang: string): string => {
   const hours = Math.floor(+runtimeMins / 60);
   const remainingMinutes = +runtimeMins % 60;
 
-  return lang === LANG.UA
+  return lang === LangEnum.UA
     ? `${hours}г ${remainingMinutes}хв`
     : `${hours}h ${remainingMinutes}min`;
 };
@@ -68,7 +72,8 @@ export const getValidBudget = (
   budget: string,
   cumulativeWorldwideGross: string
 ): string => {
-  if (budget.includes(' ')) budget = budget.slice(0, budget.indexOf(' '));
+  if (budget && budget.includes(' '))
+    budget = budget.slice(0, budget.indexOf(' '));
 
   return `${budget} / ${cumulativeWorldwideGross}`;
 };

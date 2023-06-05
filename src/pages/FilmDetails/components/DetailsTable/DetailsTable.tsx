@@ -63,8 +63,8 @@ export const DetailsTable = ({ data }: IDetailsTable) => {
           'filmDetails.cumulativeWorldwideGross'
         )}`,
         value: getValidBudget(
-          data.boxOffice.budget,
-          data.boxOffice.cumulativeWorldwideGross
+          data.boxOffice?.budget,
+          data.boxOffice?.cumulativeWorldwideGross
         ),
       },
     ],
