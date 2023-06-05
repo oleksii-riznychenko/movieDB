@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/movie-db/static/css/main.4cd00f3c.css",
+    "main.js": "/movie-db/static/js/main.25d613ec.js",
+    "static/media/rottenTomatoes.png": "/movie-db/static/media/rottenTomatoes.0fd98d8b754d1e2060ed.png",
+    "static/media/logo_transparent.png": "/movie-db/static/media/logo_transparent.fc034515c3c3790c44fc.png",
+    "static/media/slick.svg": "/movie-db/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/movie-db/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/movie-db/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/imdb.svg": "/movie-db/static/media/imdb.b6921a6ca3fe8973f705657cf7499429.svg",
+    "static/media/slick.woff": "/movie-db/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/metacritic.svg": "/movie-db/static/media/metacritic.f241ee4306a29eb915cd6e225b76bbde.svg",
+    "index.html": "/movie-db/index.html",
+    "main.4cd00f3c.css.map": "/movie-db/static/css/main.4cd00f3c.css.map",
+    "main.25d613ec.js.map": "/movie-db/static/js/main.25d613ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4cd00f3c.css",
+    "static/js/main.25d613ec.js"
+  ]
+}
