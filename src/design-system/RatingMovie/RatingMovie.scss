@@ -1,0 +1,22 @@
+.rating-movie {
+  position: relative;
+  display: inline-flex;
+  &__default {
+    color: var(--main-gray-color) !important;
+  }
+  &__progress {
+    position: absolute;
+    left: 0 !important;
+    color: var(--main-bc-color) !important;
+  }
+  &__text-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+}

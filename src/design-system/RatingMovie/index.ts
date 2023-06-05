@@ -1,0 +1,1 @@
+export { RatingMovie } from './RatingMovie';

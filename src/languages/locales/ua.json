@@ -1,0 +1,74 @@
+{
+  "titles": {
+    "top250Movies": "Топ 250 фільмів",
+    "top250TVs": "Топ 250 серіалів",
+    "popularMovies": "Популярні фільми",
+    "popularSeries": "Популярні серіали",
+    "inTheaters": "У кінотеатрах",
+    "comingSoon": "Скоро у кіно",
+    "boxOffice": "Бокс офіс",
+    "boxOfficeAllTime": "Бокс офіс за весь час"
+  },
+  "header": {
+    "menu": {
+      "movies": "Фільми",
+      "series": "Серіали",
+      "cartoons": "Мультфільми",
+      "anime": "Аніме",
+      "tvShows": "ТВ-шоу"
+    },
+    "profile": "Профіль"
+  },
+  "home-page": {
+    "banner": {
+      "from": "від",
+      "watch": "ДИВИТИСЯ"
+    }
+  },
+  "footer": {
+    "copyright": "Всі права захищені"
+  },
+  "not-found": {
+    "sorry": "Вибачте, щось пішло не так",
+    "try-again": "На жаль, сторінку, яку ви шукаєте, не вдалося знайти. Спробуйте перевірити URL-адресу і спробуйте ще раз.",
+    "go-home": "На головну"
+  },
+  "search": {
+    "searchTitle": "Результати за пошуком",
+    "searchTitleMobile": "Пошук фільмів і серіалів",
+    "placeholder": "Введіть запит...",
+    "searchButton": "Пошук"
+  },
+  "filmDetails": {
+    "originalTitle": "Оригінальна назва",
+    "watchTrailer": "Переглянути трейлер",
+    "details": "Подробиці",
+    "genres": "Жанри",
+    "countryOfOrigin": "Країна",
+    "releaseDate": "Дата виходу",
+    "contentRating": "Рейтинг",
+    "budget": "Бюджет",
+    "cumulativeWorldwideGross": "Загальньний збір у світі",
+    "companyList": "Компанія",
+    "director": "Режисер",
+    "runtime": "Час",
+    "castAndCrew": "Актори & Знімальна група",
+    "showAll": "Переглянути всіх",
+    "as": "у ролі",
+    "linkSuccessfullyCopied": "Посилання успішно скопійовано",
+    "similarMovies": "Cхожі фільми"
+  },
+  "actorDetails": {
+    "birthDate": "Дата народження",
+    "deathDate": "Дата смерті",
+    "credits": "Рід діяльності",
+    "height": "Зріст",
+    "awards": "Нагороди",
+    "biography": "Біографія",
+    "allFilms": "Усі фільми та серіали",
+    "knownFor": "Видомі фільми"
+  },
+  "modal": {
+    "close": "Закрити"
+  }
+}

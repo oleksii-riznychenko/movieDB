@@ -1,0 +1,1 @@
+export { InTheaters } from './InTheaters';

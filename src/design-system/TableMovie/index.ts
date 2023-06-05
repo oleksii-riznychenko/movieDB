@@ -1,0 +1,1 @@
+export { TableMovie } from './TableMovie';

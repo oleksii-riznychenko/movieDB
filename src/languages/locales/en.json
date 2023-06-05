@@ -1,0 +1,75 @@
+{
+  "logo": "LOGO",
+  "titles": {
+    "top250Movies": "Top 250 Movies",
+    "top250TVs": "Top 250 Series",
+    "popularMovies": "Top Popular Films",
+    "popularSeries": "Top Popular Series",
+    "inTheaters": "In Theaters",
+    "comingSoon": "Coming Soon",
+    "boxOffice": "Box Office",
+    "boxOfficeAllTime": "Box Office All Time"
+  },
+  "header": {
+    "menu": {
+      "movies": "Movies",
+      "series": "Series",
+      "cartoons": "Cartoons",
+      "anime": "Anime",
+      "tvShows": "TV Shows"
+    },
+    "profile": "Profile"
+  },
+  "home-page": {
+    "banner": {
+      "from": "from",
+      "watch": "WATCH"
+    }
+  },
+  "footer": {
+    "copyright": "All rights reserved"
+  },
+  "not-found": {
+    "sorry": "Sorry something went wrong",
+    "try-again": "Sorry, the page you are looking for cannot be found. Check the URL and try again.",
+    "go-home": "Home"
+  },
+  "search": {
+    "searchTitle": "Results by search",
+    "searchTitleMobile": "Search films and series",
+    "placeholder": "Type here...",
+    "searchButton": "Search"
+  },
+  "filmDetails": {
+    "originalTitle": "Original title",
+    "watchTrailer": "Watch trailer",
+    "details": "Details",
+    "genres": "Genres",
+    "countryOfOrigin": "Country of origin",
+    "releaseDate": "Release date",
+    "contentRating": "Rating",
+    "budget": "Budget",
+    "cumulativeWorldwideGross": "Cumulative worldwide gross",
+    "companyList": "Company",
+    "director": "Director",
+    "runtime": "Runtime",
+    "castAndCrew": "Cast & Crew",
+    "showAll": "Show all",
+    "as": "as",
+    "linkSuccessfullyCopied": "Link successfully copied",
+    "similarMovies": "Similar movies"
+  },
+  "actorDetails": {
+    "birthDate": "Date of birth",
+    "deathDate": "Date of death",
+    "credits": "Credits",
+    "height": "Height",
+    "awards": "Awards",
+    "biography": "Biography",
+    "allFilms": "All films and series",
+    "knownFor": "Known for"
+  },
+  "modal": {
+    "close": "Close"
+  }
+}

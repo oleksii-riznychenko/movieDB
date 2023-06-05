@@ -1,0 +1,1 @@
+export { PersonKnownFor } from './PersonKnownFor';

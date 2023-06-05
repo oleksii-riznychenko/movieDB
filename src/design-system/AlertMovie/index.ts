@@ -1,0 +1,1 @@
+export { AlertMovie } from './AlertMovie';

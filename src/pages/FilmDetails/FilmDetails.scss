@@ -1,0 +1,107 @@
+@import 'src/assets/styles/variables/variables';
+
+.film-details {
+  &__stack {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 700 !important;
+  }
+  &__original-title,
+  &__description,
+  &__cast-description {
+    color: $secondary-font-color;
+  }
+  &__content {
+    max-width: 50%;
+  }
+  &__row {
+    margin-bottom: 15px;
+    &--buttons {
+      button {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__cast,
+  &__poster {
+    max-width: 25%;
+  }
+  &__cast-list {
+    padding: 0 !important;
+    > a > div {
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+  }
+  &__cast-name {
+    color: $main-font-color;
+    font-weight: 600 !important;
+  }
+  &__link {
+    > div {
+      cursor: pointer !important;
+    }
+  }
+  &__poster {
+    .film-details__poster-image img {
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+  }
+  &__title-table {
+    font-weight: 700 !important;
+  }
+  &__table-chips {
+    div {
+      margin-right: 5px;
+    }
+  }
+  &__redirect-link {
+    p {
+      display: flex;
+      align-items: center;
+      color: $main-font-color !important;
+    }
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__rating-item {
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+    align-items: center;
+    display: inline-flex;
+    border: 1px solid $main-gray-color;
+
+    img {
+      max-width: 40px;
+      margin-left: 10px;
+    }
+  }
+
+  &__background {
+    display: block;
+    background-color: $main-bc-color !important;
+    transition: 1s !important;
+  }
+
+  &__background:hover {
+    background-color: $third-bc-color !important;
+  }
+
+  &__trailer {
+    width: 854px;
+    border: none;
+    height: 600px;
+  }
+}

@@ -1,0 +1,15 @@
+export { HomePage } from './HomePage';
+export { NotFound } from './NotFound';
+export { TopMovies } from './TopMovies';
+export { TopSeries } from './TopSeries';
+export { Top250Films } from './Top250Films';
+export { Top250TVs } from './Top250TVs';
+export { InTheaters } from './InTheaters';
+export { ComingSoon } from './ComingSoon';
+export { BoxOffice } from './BoxOffice';
+export { BoxOfficeAllTime } from './BoxOfficeAllTime';
+export { FilmDetails } from './FilmDetails';
+export { PersonDetails } from './PersonDetails';
+export { TopCartoons } from './TopCartoons';
+export { SearchPage } from './SearchPage';
+export { SearchPageMobile } from './SearchPageMobile';

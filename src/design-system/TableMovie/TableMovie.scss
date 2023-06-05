@@ -1,0 +1,13 @@
+.table-movie {
+  background: transparent !important;
+  box-shadow: none !important;
+  td {
+    border-color: var(--main-gray-color);
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

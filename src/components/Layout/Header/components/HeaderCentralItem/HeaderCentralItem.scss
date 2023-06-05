@@ -1,0 +1,55 @@
+@import 'src/assets/styles/variables/variables';
+
+.header {
+  &__center-item {
+    display: flex;
+    align-items: center;
+    border-radius: $main-border-radius;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    position: relative;
+    z-index: 1;
+    border: 1px solid $fifth-bc-color;
+    border-radius: $main-border-radius;
+  }
+
+  &__input {
+    height: 34px;
+    width: 250px;
+    color: $main-font-color;
+    border: none;
+    border-radius: $main-border-radius;
+    font-size: 17px;
+    padding-left: 10px;
+    outline: none;
+    background-color: $fourth-bc-color;
+  }
+
+  &__loupe {
+    cursor: pointer;
+    margin-left: -10px;
+    padding: 5px 10px 5px 17px;
+    border: 1px solid $fifth-bc-color;
+    background: $fourth-bc-color;
+    border-radius: 0 $main-border-radius $main-border-radius 0;
+    transition: 1s;
+  }
+
+  &__loupe:hover {
+    box-shadow: inset 0 -100px 0 0 $third-bc-color;
+  }
+
+  &__loupe--button {
+    color: $main-font-color;
+  }
+
+  &__loupe--button:active {
+    color: $secondary-font-color;
+  }
+}
