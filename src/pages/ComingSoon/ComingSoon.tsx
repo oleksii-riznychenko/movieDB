@@ -8,9 +8,7 @@ import i18n from 'i18next';
 export const ComingSoon = () => {
   const { t } = useTranslation();
 
-  const { data, isLoading } = useGetComingSoonQuery(
-    i18n.language === LANG.UA ? 'uk' : LANG.EN
-  );
+  const { data, isLoading } = useGetComingSoonQuery(i18n.language);
 
   return (
     <FilmCatalog

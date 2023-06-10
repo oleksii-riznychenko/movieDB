@@ -12,6 +12,11 @@ export const HeaderList = () => {
   const config: HeaderItem[] = useMemo(
     () => [
       {
+        title: t('header.menu.home'),
+        id: 'Home',
+        link: configLink.home,
+      },
+      {
         title: t('header.menu.movies'),
         id: 'Movies',
         link: configLink.movies,
@@ -26,16 +31,6 @@ export const HeaderList = () => {
         id: 'Cartoons',
         link: configLink.cartoons,
       },
-      {
-        title: t('header.menu.anime'),
-        id: 'Anime',
-        link: configLink.anime,
-      },
-      {
-        title: t('header.menu.tvShows'),
-        id: 'TV Shows',
-        link: configLink.tvShows,
-      },
     ],
     [t]
   );
@@ -48,7 +43,7 @@ export const HeaderList = () => {
             <NavLink
               className={({ isActive }) =>
                 classNames('header__link--item', {
-                  'is-active': isActive,
+                  'header__link--active': isActive,
                 })
               }
               to={link}

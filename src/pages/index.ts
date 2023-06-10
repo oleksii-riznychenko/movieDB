@@ -10,6 +10,6 @@ export { BoxOffice } from './BoxOffice';
 export { BoxOfficeAllTime } from './BoxOfficeAllTime';
 export { FilmDetails } from './FilmDetails';
 export { PersonDetails } from './PersonDetails';
-export { TopCartoons } from './TopCartoons';
 export { SearchPage } from './SearchPage';
 export { SearchPageMobile } from './SearchPageMobile';
+export { FullCast } from './FullCast';
