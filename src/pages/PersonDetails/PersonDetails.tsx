@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { GlobalLoader, Layout } from '../../components';
 import { useGetPersonInformationQuery } from '../../service/OthersService';
 import { useParams } from 'react-router-dom';
@@ -12,39 +12,6 @@ export const PersonDetails = (): JSX.Element => {
   const params = useParams();
   const { data, isLoading } = useGetPersonInformationQuery(String(params.id));
   let biography;
-
-  // let information;
-
-  // if (data) {
-  //   information = useMemo(
-  //     () => [
-  //       {
-  //         title: t('actorDetails.birthData'),
-  //         value: (
-  //           data.height
-  //         ),
-  //       },
-  //       {
-  //         title: t('actorDetails.birthData'),
-  //         value: (
-  //           data.height
-  //         ),
-  //       },
-  //       {
-  //         title: t('actorDetails.birthData'),
-  //         value: (
-  //           data.height
-  //         ),
-  //       },
-  //       {
-  //         title: t('actorDetails.birthData'),
-  //         value: (
-  //           data.height
-  //         ),
-  //       },
-  //     ], [t]
-  //   );
-  // }
 
   if (data) {
     biography = data.summary
