@@ -1,25 +1,32 @@
 @import 'src/assets/styles/variables/variables';
 
-.films-block {
-  border-radius: 12px;
-  transition: 1s;
-  margin: 5px;
-  padding: 5px;
+.full-cast {
+  &__card {
+    border-radius: 12px;
+    transition: 1s;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  &__card:hover {
+    background-color: rgba(141, 141, 141, 0.26);
+  }
 
   &__image {
     display: block;
     height: 230px;
+    width: 150px;
     background-position: center;
     background-size: cover;
     border-radius: $main-border-radius;
   }
 
   &__title {
+    width: 150px;
     text-align: center;
     padding: 5px 5px 0;
   }
 }
 
-.films-block:hover {
-  background-color: rgba(141, 141, 141, 0.26);
+.full-cast:hover {
 }

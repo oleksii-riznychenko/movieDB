@@ -3,6 +3,6 @@ import { TFunction } from 'i18next';
 
 export interface IServerData {
   data: IMoviesData | undefined;
-  isLoading: boolean;
+  isLoading?: boolean;
   title: string;
 }

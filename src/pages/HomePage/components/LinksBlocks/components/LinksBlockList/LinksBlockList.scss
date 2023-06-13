@@ -24,11 +24,6 @@
     box-shadow: inset 0 -100px 0 0 $third-bc-color;
     transform: scale(105%);
   }
-
-  &__item {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 1000px) {
