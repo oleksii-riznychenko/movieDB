@@ -1,4 +1,4 @@
-export const APIKEY = 'k_sl97avk8';
+export const APIKEY = 'k_3kkf3myc';
 // k_sl97avk8 Dmytro 1 user12345
 // k_10zfa02h Dmytro 3 mdm-12345
 // k_3kkf3myc Alex
