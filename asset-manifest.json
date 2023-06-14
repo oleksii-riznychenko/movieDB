@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/movieDB/static/css/main.efa3322c.css",
-    "main.js": "/movieDB/static/js/main.61832027.js",
+    "main.js": "/movieDB/static/js/main.1a5c3c2a.js",
     "static/media/rottenTomatoes.png": "/movieDB/static/media/rottenTomatoes.0fd98d8b754d1e2060ed.png",
     "static/media/logo_transparent.png": "/movieDB/static/media/logo_transparent.fc034515c3c3790c44fc.png",
     "static/media/slick.svg": "/movieDB/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -12,10 +12,10 @@
     "static/media/metacritic.svg": "/movieDB/static/media/metacritic.f241ee4306a29eb915cd6e225b76bbde.svg",
     "index.html": "/movieDB/index.html",
     "main.efa3322c.css.map": "/movieDB/static/css/main.efa3322c.css.map",
-    "main.61832027.js.map": "/movieDB/static/js/main.61832027.js.map"
+    "main.1a5c3c2a.js.map": "/movieDB/static/js/main.1a5c3c2a.js.map"
   },
   "entrypoints": [
     "static/css/main.efa3322c.css",
-    "static/js/main.61832027.js"
+    "static/js/main.1a5c3c2a.js"
   ]
 }
